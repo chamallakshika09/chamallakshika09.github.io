@@ -8,16 +8,20 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { ThemeContext } from 'context';
 
-const menuItems = ['About Me', 'Experience', 'Education', 'Projects', 'Achievements', 'Contact'];
+const menuItems = ['Chamal Perera', 'About Me', 'Experience', 'Education', 'Projects', 'Achievements', 'Contact'];
 
 const drawerWidth = 240;
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const { mode, setMode } = useContext(ThemeContext);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -36,16 +40,26 @@ const Header = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+          <Button sx={{ display: { xs: 'none', sm: 'block' }, color: '#fff' }} size="large">
             Chamal Perera
-          </Typography>
+          </Button>
+          <div style={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}></div>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {menuItems.map((item) => (
+            {menuItems.slice(1).map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}
           </Box>
+          <IconButton
+            sx={{ ml: 1 }}
+            onClick={() => {
+              setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+            }}
+            color="inherit"
+          >
+            {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+          </IconButton>
         </Toolbar>
       </AppBar>
       <nav>
