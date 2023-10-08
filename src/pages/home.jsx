@@ -1,9 +1,10 @@
+import { HeroSection } from 'components';
 import { HeaderLayout } from 'layouts';
 
 export const Home = () => {
   return (
     <HeaderLayout>
-      <div>ABC</div>
+      <HeroSection />
     </HeaderLayout>
   );
 };

@@ -11,8 +11,9 @@ export const HeaderLayout = ({ children }) => {
         alignItems="center"
         sx={{
           width: '100vw',
-          marginTop: (theme) => `${getAppbarHeight(theme)})`,
+          marginTop: (theme) => `${getAppbarHeight(theme)}`,
           height: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
+          overflowY: 'auto',
         }}
       >
         {children}
