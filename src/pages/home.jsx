@@ -1,4 +1,4 @@
-import { AboutMeSection, HeroSection } from 'components';
+import { AboutMeSection, ExperienceSection, HeroSection } from 'components';
 
 import { HeaderLayout } from 'layouts';
 
@@ -7,6 +7,7 @@ export const Home = () => {
     <HeaderLayout>
       <HeroSection />
       <AboutMeSection />
+      <ExperienceSection />
     </HeaderLayout>
   );
 };
