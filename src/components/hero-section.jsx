@@ -1,71 +1,84 @@
 import React from 'react';
-import { Button, Typography, Stack, Avatar, IconButton, Paper } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { Box, Typography, Button, IconButton, useTheme, useMediaQuery } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import DownloadIcon from '@mui/icons-material/Download';
+import ProfilePhoto from 'assets/my-photo.png';
 import StackOverflowIcon from 'assets/stack-overflow-icon';
+import { Dynamic3DBackground } from './dynamic-3d-background';
 
 export const HeroSection = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Paper elevation={3} sx={{ p: 2, mt: 4, maxWidth: '1000px' }}>
-      <Stack
+    <Box
+      sx={{
+        height: '100vh',
+        width: '100%',
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+      }}
+    >
+      <Dynamic3DBackground />
+      <Box
         sx={{
-          // height: '100%',
-          p: {
-            xs: 2,
-            md: 4,
-          },
-          textAlign: 'left',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+          zIndex: 10,
+          p: isMobile ? 2 : 4,
+          backdropFilter: 'blur(5px)',
+          borderRadius: '10px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
-        justifyContent="flex-start"
-        alignItems={{ xs: 'center', md: 'flex-start' }}
-        direction={{ xs: 'column', md: 'row' }}
-        spacing={2}
       >
-        <Stack direction="column" justifyContent="center" alignItems="flex-start">
-          <Typography variant="subtitle1" paragraph>
-            Hi there 👋
-          </Typography>
-          <Typography variant="subtitle1" paragraph>
-            My name is
-          </Typography>
-          <Typography variant="h2" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.125rem' } }}>
-            Chamal Perera
-          </Typography>
-          <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.25rem', md: '1.5rem' } }}>
-            Tech Lead & Fullstack Software Engineer
-          </Typography>
-          <Typography variant="subtitle1" paragraph>
-            I create robust and scalable web applications with cutting-edge technologies.
-          </Typography>
-          <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: { xs: 2, md: 0 } }}>
-            <Button variant="contained" color="secondary" href="#projects" size="large">
-              Resume
-            </Button>
-            <IconButton href="https://github.com/chamallakshika09" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon />
-            </IconButton>
-            <IconButton
-              href="https://stackoverflow.com/users/14613753/chamal-perera"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StackOverflowIcon width={32} />
-            </IconButton>
-            <IconButton href="https://www.linkedin.com/in/chamallakshika09/" target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon />
-            </IconButton>
-          </Stack>
-        </Stack>
-        <Avatar
-          src="my-photo.png"
+        <Box
+          component="img"
+          src={ProfilePhoto}
           alt="Chamal Perera"
-          sx={{
-            width: { xs: 150, md: 200 },
-            height: 'auto',
-          }}
-          variant="rounded"
+          sx={{ width: 120, height: 120, borderRadius: '50%', mb: 2 }}
         />
-      </Stack>
-    </Paper>
+        <Typography variant={isMobile ? 'h4' : 'h2'} gutterBottom>
+          Chamal Perera
+        </Typography>
+        <Typography variant={isMobile ? 'h6' : 'h5'}>Tech Lead & Fullstack Software Engineer</Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          I create robust and scalable web applications with cutting-edge technologies.
+        </Typography>
+        <Button variant="contained" startIcon={<DownloadIcon />} sx={{ mb: 2 }} href="" download>
+          Download Resume
+        </Button>
+        <Box>
+          <IconButton
+            aria-label="LinkedIn"
+            color="primary"
+            href="https://www.linkedin.com/in/chamallakshika09/"
+            target="_blank"
+          >
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton aria-label="GitHub" color="primary" href="https://github.com/chamallakshika09" target="_blank">
+            <GitHubIcon />
+          </IconButton>
+          <IconButton
+            aria-label="StackOverflow"
+            color="primary"
+            href="https://stackoverflow.com/users/14613753/chamal-perera"
+            target="_blank"
+          >
+            <StackOverflowIcon width={24} />
+          </IconButton>
+        </Box>
+      </Box>
+    </Box>
   );
 };

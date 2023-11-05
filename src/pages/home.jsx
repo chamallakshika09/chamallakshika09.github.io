@@ -1,13 +1,16 @@
-import { AboutMeSection, ExperienceSection, HeroSection } from 'components';
-
-import { HeaderLayout } from 'layouts';
+import { Box } from '@mui/material';
+import { AboutMePreview, ContactCTA, Footer, HeroSection, ProjectsPreview } from 'components';
+import Header from 'components/header';
 
 export const Home = () => {
   return (
-    <HeaderLayout>
+    <Box>
+      <Header />
       <HeroSection />
-      <AboutMeSection />
-      <ExperienceSection />
-    </HeaderLayout>
+      <AboutMePreview />
+      <ProjectsPreview />
+      <ContactCTA />
+      <Footer />
+    </Box>
   );
 };
