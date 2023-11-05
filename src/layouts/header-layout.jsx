@@ -10,9 +10,9 @@ export const HeaderLayout = ({ children }) => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          width: '100vw',
+          width: '100%',
           marginTop: (theme) => `${getAppbarHeight(theme)}`,
-          height: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
+          // height: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
           overflowY: 'auto',
         }}
       >
