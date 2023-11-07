@@ -5,3 +5,7 @@ export * from './experience-section';
 export * from './contacts-cta';
 export * from './footer';
 export * from './projects-preview';
+export * from './experience-timeline';
+export * from './educational-timeline';
+export * from './skills-section';
+export * from './hobbies-and-interests';
