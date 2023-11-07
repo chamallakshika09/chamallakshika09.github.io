@@ -9,3 +9,6 @@ export * from './experience-timeline';
 export * from './educational-timeline';
 export * from './skills-section';
 export * from './hobbies-and-interests';
+export * from './personal-quote-and-goals';
+export * from './hobbies-and-interests.b';
+export * from './project-3d-model';
