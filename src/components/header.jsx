@@ -16,11 +16,21 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from 'context';
+import { useNavigate } from 'react-router-dom';
 
-const menuItems = ['Chamal Perera', 'About Me', 'Experience', 'Education', 'Projects', 'Achievements', 'Contact'];
+const menuItems = [
+  { key: 'name', text: 'Chamal Perera', link: '/' },
+  { key: 'about-me', text: 'About Me', link: '/about-me' },
+  { key: 'experience', text: 'Experience', link: '/experience' },
+  { key: 'education', text: 'Education', link: '/education' },
+  { key: 'projects', text: 'Projects', link: '/projects' },
+  { key: 'achievements', text: 'Achievements', link: '/achievements' },
+  { key: 'contact', text: 'Contact', link: '/contact' },
+];
 
 const Header = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   const { mode, setMode } = useContext(ThemeContext);
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -33,8 +43,8 @@ const Header = () => {
 
   const drawer = (
     <List>
-      {menuItems.slice(1).map((text) => (
-        <ListItemButton key={text}>
+      {menuItems.slice(1).map(({ text, key, link }) => (
+        <ListItemButton key={key} onClick={() => navigate(link)}>
           <ListItemText primary={text} />
         </ListItemButton>
       ))}
@@ -45,7 +55,9 @@ const Header = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Chamal Perera
+          <Button key={menuItems[0].key} color="inherit" onClick={() => navigate(menuItems[0].link)}>
+            {menuItems[0].text}
+          </Button>
         </Typography>
         {isMobile ? (
           <>
@@ -67,8 +79,8 @@ const Header = () => {
           </>
         ) : (
           <div>
-            {menuItems.slice(1).map((text) => (
-              <Button key={text} color="inherit">
+            {menuItems.slice(1).map(({ text, key, link }) => (
+              <Button key={key} color="inherit" onClick={() => navigate(link)}>
                 {text}
               </Button>
             ))}

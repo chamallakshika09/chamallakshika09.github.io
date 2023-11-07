@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Typography, Card, CardActionArea, CardMedia, CardContent, Grid, Button } from '@mui/material';
 import { projectsData } from 'data';
+import { useNavigate } from 'react-router-dom';
 
 export const ProjectsPreview = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ padding: 4 }}>
       <Typography variant="h4" gutterBottom textAlign="center">
@@ -33,7 +35,7 @@ export const ProjectsPreview = () => {
         ))}
       </Grid>
       <Box textAlign="center" mt={4}>
-        <Button variant="contained" href="#/projects">
+        <Button variant="contained" onClick={() => navigate('/projects')}>
           View Projects
         </Button>
       </Box>

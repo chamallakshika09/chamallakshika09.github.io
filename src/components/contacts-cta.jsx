@@ -13,7 +13,7 @@ export const ContactCTA = () => {
         textAlign: 'center',
         backgroundColor: 'rgba(0,0,0,0.5)',
         color: 'white',
-        backgroundImage: 'url("/path-to-background-image.jpg")',
+        // backgroundImage: 'url("/path-to-background-image.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
