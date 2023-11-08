@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardActionArea, CardContent, CardMedia, Typography, Modal, Box, Tabs, Tab } from '@mui/material';
+import {
+  Grid,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+  Modal,
+  Box,
+  Tabs,
+  Tab,
+  Chip,
+} from '@mui/material';
 import Header from 'components/header';
-import { Project3DModel } from 'components';
+import { projectsData } from 'data';
 
-// Example project data
-const projectsData = [
-  {
-    id: 'proj-1',
-    category: 'Web Development',
-    title: 'Project One',
-    description: 'Short description of Project One...',
-    image: '/path-to-project-image.jpg',
-    // ... other project details
-  },
-  {
-    id: 'proj-2',
-    category: '3D Modeling',
-    title: 'Project Two',
-    description: 'Short description of Project Two...',
-    image: '/path-to-project-image.jpg',
-    // ... other project details
-  },
-  // ... more projects
-];
+const getTabs = () => {
+  const tabs = new Set();
+
+  projectsData.forEach((project) => {
+    if (!tabs.has(project.category)) tabs.add(project.category);
+  });
+
+  return Array.from(tabs);
+};
 
 export const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -42,16 +43,15 @@ export const Projects = () => {
     setTabValue(newValue);
   };
 
-  // Filter projects based on the selected tab
   const filteredProjects = projectsData.filter((project) => tabValue === 'All' || project.category === tabValue);
   return (
     <Box>
       <Header />
       <Tabs value={tabValue} onChange={handleChangeTab} centered>
         <Tab label="All" value="All" />
-        <Tab label="Web Development" value="Web Development" />
-        <Tab label="3D Modeling" value="3D Modeling" />
-        {/* ... other categories as tabs */}
+        {getTabs().map((tab) => (
+          <Tab key={tab} label={tab} value={tab} />
+        ))}
       </Tabs>
 
       <Grid container spacing={2} sx={{ padding: '1rem' }}>
@@ -59,7 +59,7 @@ export const Projects = () => {
           <Grid item xs={12} sm={6} md={4} key={project.id}>
             <Card sx={{ maxWidth: 345 }}>
               <CardActionArea onClick={() => handleOpenModal(project)}>
-                <CardMedia component="img" height="140" image={project.image} alt={project.title} />
+                <CardMedia component="img" height="140" image={project.imageUrl} alt={project.title} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {project.title}
@@ -99,10 +99,14 @@ export const Projects = () => {
               {selectedProject.title}
             </Typography>
             <Typography id="project-modal-description" sx={{ mt: 2 }}>
-              {/* Include more detailed information or an interactive 3D preview */}
-              {/* Check if the project category is 3D Modeling to render the 3D Canvas */}
-              {selectedProject.category === '3D Modeling' && <Project3DModel modelPath={selectedProject.modelPath} />}
+              {selectedProject.detailedDescription}
             </Typography>
+            <Typography sx={{ mt: 2, fontWeight: 'bold' }}>Tools and Technologies:</Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1 }}>
+              {selectedProject.tech.map((technology, index) => (
+                <Chip key={index} label={technology} variant="outlined" sx={{ mb: 1 }} />
+              ))}
+            </Box>
           </Box>
         </Modal>
       )}
