@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Card, CardContent, Typography, CardMedia, Box, Modal } from '@mui/material';
 import Header from 'components/header';
-
-const achievementsData = [
-  {
-    id: 'nbqsa-gold-2013',
-    title: 'NBQSA 2013 Overall Gold Award',
-    description: 'The pinnacle of achievement for software product development and innovation in Sri Lanka.',
-    image: '/images/nbqsa-gold-award.jpg', // Replace with the path to the award image
-    badge: '/badges/nbqsa-gold-badge.jpg', // Replace with the path to the badge image if available
-  },
-  {
-    id: 'nbqsa-research-2013',
-    title: 'NBQSA 2013 Research & Development Gold Award',
-    description: 'A testament to innovative research and development in the field of software engineering.',
-    image: '/images/nbqsa-research-award.jpg', // Replace with the path to the award image
-    badge: '/badges/nbqsa-research-badge.jpg', // Replace with the path to the badge image if available
-  },
-  {
-    id: 'apicta-2013',
-    title: 'APICTA 2013 Sri Lanka Representative',
-    description: 'Represented Sri Lanka at the Asia Pacific ICT Alliance Awards in Hong Kong.',
-    image: '/images/apicta-rep.jpg', // Replace with the path to the representation image
-    badge: '/badges/apicta-badge.jpg', // Replace with the path to the badge image if available
-  },
-  // ... add more achievements as needed
-];
+import { achievementsData } from 'data';
 
 export const Achievements = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -46,7 +22,12 @@ export const Achievements = () => {
         {achievementsData.map((achievement) => (
           <Grid item xs={12} sm={6} md={4} key={achievement.id}>
             <Card sx={{ maxWidth: 345, cursor: 'pointer' }} onClick={() => handleOpenModal(achievement)}>
-              <CardMedia component="img" height="140" image={achievement.image} alt={achievement.title} />
+              <CardMedia
+                component="img"
+                image={achievement.image}
+                alt={achievement.title}
+                sx={{ width: 'auto', height: '200px' }}
+              />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {achievement.title}

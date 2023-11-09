@@ -12,6 +12,7 @@ const { Projects } = lazyImport(() => import('pages'), 'Projects');
 const { Achievements } = lazyImport(() => import('pages'), 'Achievements');
 const { Contact } = lazyImport(() => import('pages'), 'Contact');
 const { AboutMeB } = lazyImport(() => import('pages'), 'AboutMeB');
+const { HomeB } = lazyImport(() => import('pages'), 'HomeB');
 
 const routes = [
   {
@@ -110,6 +111,19 @@ const routes = [
     element: (
       <Suspense fallback={null}>
         <AboutMeB />
+      </Suspense>
+    ),
+    errorElement: (
+      <Suspense fallback={null}>
+        <NotFound />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/h',
+    element: (
+      <Suspense fallback={null}>
+        <HomeB />
       </Suspense>
     ),
     errorElement: (

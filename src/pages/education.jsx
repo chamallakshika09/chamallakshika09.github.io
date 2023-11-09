@@ -1,30 +1,7 @@
 import React from 'react';
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Modal, Box } from '@mui/material';
 import Header from 'components/header';
-import UcscLogo from 'assets/ucsc-logo.png';
-
-// Sample data for educational background
-const educationData = [
-  {
-    id: 'edu-1',
-    institution: 'University of Colombo School of Computing',
-    degree: 'Master of Computer Science',
-    period: 'January 2015 - June 2018',
-    logo: UcscLogo,
-    description: 'A brief overview or highlight of your experience at this institution.',
-    // Add more details for modal if needed
-  },
-  {
-    id: 'edu-2',
-    institution: 'University of Colombo School of Computing',
-    degree: 'Bachelor of Computer Science',
-    period: 'August 2010 - April 2014',
-    logo: UcscLogo,
-    description: 'A brief overview or highlight of your experience at this institution.',
-    // Add more details for modal if needed
-  },
-  // ... more education
-];
+import { educationData } from 'data';
 
 export const Education = () => {
   const [openModal, setOpenModal] = React.useState(false);
