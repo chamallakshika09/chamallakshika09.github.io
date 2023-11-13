@@ -7,8 +7,6 @@ export const educationData = [
     degree: 'Master of Computer Science',
     period: 'January 2015 - June 2018',
     logo: UcscLogo,
-    description: 'A brief overview or highlight of your experience at this institution.',
-    // Add more details for modal if needed
   },
   {
     id: 'edu-2',
@@ -16,8 +14,5 @@ export const educationData = [
     degree: 'Bachelor of Computer Science',
     period: 'August 2010 - April 2014',
     logo: UcscLogo,
-    description: 'A brief overview or highlight of your experience at this institution.',
-    // Add more details for modal if needed
   },
-  // ... more education
 ];

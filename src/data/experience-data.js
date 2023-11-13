@@ -4,7 +4,23 @@ export const experienceData = [
     company: 'Digital Blue Foam, Remote',
     duration: 'March 2023 - Present',
     description: 'Guiding the technical direction and ensuring the robustness of web applications.',
-    technologies: ['React', 'Node.js', 'AWS'],
+    technologies: [
+      'React',
+      'Redux',
+      'Node.js',
+      'Express.js',
+      'HTML',
+      'CSS',
+      'Javascript',
+      'Material UI',
+      'AWS',
+      'MongoDB',
+      'Three.js',
+      'Jest',
+      'React Testing Library',
+      'P5.js',
+      'Electron.js',
+    ],
     extraDescription: `
     As a Tech Lead at DBF, I played a pivotal role in driving technical excellence and innovation within the
     organization. My responsibilities included leading a team of talented developers, overseeing project
@@ -23,7 +39,25 @@ export const experienceData = [
     duration: 'April 2021 - February 2023',
     description:
       'Developed full-stack applications and contributed to all stages of the software development lifecycle.',
-    technologies: ['React', 'Express.js', 'MongoDB'],
+    technologies: [
+      'React',
+      'Redux',
+      'Node.js',
+      'Express.js',
+      'HTML',
+      'CSS',
+      'Javascript',
+      'Material UI',
+      'AWS',
+      'MongoDB',
+      'Three.js',
+      'Jest',
+      'React Testing Library',
+      'P5.js',
+      'Electron.js',
+      'C#',
+      'Python',
+    ],
     extraDescription: `
     As a Full Stack Software Engineer at DBF, I contributed to the development of cutting-edge web applications.
     My responsibilities included designing and implementing features, optimizing performance, and ensuring the
@@ -41,7 +75,27 @@ export const experienceData = [
     duration: 'February 2018 - April 2021',
     description:
       'Led the development team in creating simulation software and fostered an agile development environment.',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
+    technologies: [
+      'React',
+      'Redux',
+      'Node.js',
+      'Express.js',
+      'HTML',
+      'CSS',
+      'Javascript',
+      'Material UI',
+      'AWS',
+      'MongoDB',
+      'MySQL',
+      'Jest',
+      'Enzyme',
+      'Vue.js',
+      'C#',
+      'Java',
+      'React Native',
+      'Android',
+      'PHP',
+    ],
     extraDescription: `
     As a Tech Lead at L K Simulations (Private) Limited, I led engineering teams and played a key role in the design
     and development of various software solutions. My responsibilities included leading frontend application
@@ -58,14 +112,14 @@ export const experienceData = [
     duration: 'January 2017 - February 2018',
     description:
       'Managed a team of developers and worked closely with stakeholders to define project scopes and deliverables.',
-    technologies: ['C#', 'Xamarin', 'Swift'],
+    technologies: ['Java', 'C++', 'C#', 'HTML', 'CSS', 'Javascript', 'AWS', 'MySQL', 'Swift', 'Android', 'AWS'],
   },
   {
     title: 'Senior Software Engineer / Specialized Software Engineer',
     company: 'L K Simulations (Private) Limited',
     duration: 'August 2015 - January 2017',
     description: 'Focused on high-level system design and integration with an emphasis on scalability and performance.',
-    technologies: ['C++', 'Python', 'Java SE'],
+    technologies: ['Java', 'C++', 'C#', 'HTML', 'CSS', 'Javascript', 'AWS', 'MySQL', 'Xamarin', 'Android', 'PHP'],
   },
   {
     title: 'Trainee Developer / Research Assistant / Research Consultant',
@@ -73,6 +127,6 @@ export const experienceData = [
     duration: 'August 2013 - December 2017',
     description:
       'Engaged in research and development while supporting academic projects and facilitating technology transfer.',
-    technologies: ['Java', 'Android', 'WebSocket'],
+    technologies: ['Java', 'C++', 'C#', 'HTML', 'CSS', 'Javascript', 'AWS', 'MySQL', 'Xamarin', 'Android', 'PHP'],
   },
 ];

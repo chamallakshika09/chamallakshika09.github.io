@@ -17,3 +17,4 @@ export * from './project-highlight';
 export * from './central-object';
 export * from './achievements';
 export * from './avatar';
+export * from './flip-card';
