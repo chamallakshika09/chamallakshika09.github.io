@@ -1,5 +1,5 @@
 export * from './not-found';
-export * from './home.b';
+export * from './home';
 export * from './about-me';
 export * from './achievements';
 export * from './contact';
@@ -7,4 +7,4 @@ export * from './education';
 export * from './experience';
 export * from './projects';
 export * from './about-me.b';
-export * from './home';
+export * from './home.b';
