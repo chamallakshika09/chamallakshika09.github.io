@@ -7,13 +7,11 @@ export const HeaderLayout = ({ children }) => {
     <>
       <Header />
       <Stack
-        justifyContent="center"
-        alignItems="center"
+        flexDirection="column"
         sx={{
           width: '100%',
-          marginTop: (theme) => `${getAppbarHeight(theme)}`,
-          // height: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
-          overflowY: 'auto',
+          // marginTop: (theme) => `${getAppbarHeight(theme)}`,
+          height: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
         }}
       >
         {children}

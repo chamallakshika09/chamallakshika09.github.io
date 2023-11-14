@@ -7,7 +7,7 @@ import StackOverflowIcon from 'assets/stack-overflow-icon';
 export const Footer = () => {
   return (
     <Box sx={{ backgroundColor: '#212121', color: 'white', padding: 3 }}>
-      <Grid container justifyContent="space-between" alignItems="center">
+      {/* <Grid container justifyContent="space-between" alignItems="center">
         <Grid item xs={12} md={4}>
           <Typography variant="h6">Chamal Perera</Typography>
           <Typography variant="body2">Tech Lead & Fullstack Software Engineer</Typography>
@@ -47,7 +47,7 @@ export const Footer = () => {
             <StackOverflowIcon width={24} />
           </IconButton>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Typography variant="body2" textAlign="center" marginTop={2}>
         © {new Date().getFullYear()} Chamal Perera. All rights reserved.
       </Typography>

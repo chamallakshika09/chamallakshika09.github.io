@@ -1,16 +1,14 @@
-import { Box } from '@mui/material';
 import { AboutMePreview, ContactCTA, Footer, HeroSection, ProjectsPreview } from 'components';
-import Header from 'components/header';
+import { HeaderLayout } from 'layouts';
 
 export const Home = () => {
   return (
-    <Box>
-      <Header />
+    <HeaderLayout>
       <HeroSection />
       <AboutMePreview />
       <ProjectsPreview />
       <ContactCTA />
       <Footer />
-    </Box>
+    </HeaderLayout>
   );
 };
