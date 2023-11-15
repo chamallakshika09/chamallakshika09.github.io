@@ -340,4 +340,175 @@ export const projectsData = [
       },
     ],
   },
+  {
+    id: 'proj-8',
+    title: 'Varnik',
+    description:
+      'This project entailed developing an innovative AR/VR Application Generation Platform, designed to create immersive augmented and virtual reality experiences. The platform integrates cutting-edge technologies to enable users to effortlessly design and deploy interactive AR/VR applications for various use cases.',
+    imageUrl: preview1,
+    // projectUrl: 'https://example.com'
+    category: 'Work Project',
+    featuredProject: false,
+    tech: ['Vue.js', 'PHP', 'VueX', 'Vuetify', 'Laravel', 'AWS', 'Javascript', 'HTML', 'CSS', 'MySQL'],
+    detailedDescription:
+      'This project featured a comprehensive CMS built with Vue.js for the frontend, offering a dynamic and user-friendly interface. The backend was developed using PHP with the Laravel framework, ensuring robust and scalable server-side functionality. MySQL was chosen as the database solution, providing efficient data management and storage. The entire system was seamlessly deployed on AWS, leveraging cloud capabilities for enhanced performance, reliability, and scalability. This architecture not only facilitated efficient content management but also ensured a streamlined and secure operation, catering to the complex needs of modern web applications.',
+    tasks: [
+      {
+        key: 'Frontend Development',
+        value:
+          'Contributed to the development of frontend features using Vue.js, ensuring a smooth user experience and interface.',
+      },
+      {
+        key: 'Cloud Infrastructure Management',
+        value:
+          'Managed the AWS cloud infrastructure, overseeing the setup and maintenance for optimal performance and scalability.',
+      },
+      {
+        key: 'Deployment Architecture Consultation',
+        value:
+          'Provided expertise in deployment architecture, ensuring efficient and reliable application deployment strategies.',
+      },
+    ],
+  },
+  {
+    id: 'proj-9',
+    title: 'Canvassing Management System',
+    description:
+      "L K Simulations' own product, designed for effective canvassing management with integrated web and mobile application solutions.",
+    imageUrl: preview1,
+    // projectUrl: 'https://example.com',
+    category: 'Work Project',
+    featuredProject: false,
+    tech: ['React', 'Redux', 'React Native', 'Firebase', 'Javascript', 'HTML', 'CSS'],
+    detailedDescription:
+      "Led the design and development of L K Simulations' Canvassing Management System, a comprehensive tool for managing canvassing activities. The system features both web and mobile applications, built using React and React Native, with Redux for state management and Firebase for backend services.",
+    tasks: [
+      {
+        key: 'System Design',
+        value:
+          'Architected the overall structure of the Canvassing Management System, ensuring robustness and scalability.',
+      },
+      {
+        key: 'Web and Mobile Application Development',
+        value:
+          'Contributed to the development of both web and mobile interfaces, utilizing React and React Native to create a cohesive user experience.',
+      },
+    ],
+  },
+  {
+    id: 'proj-10',
+    title: 'Staff Transport Management System',
+    description:
+      'A comprehensive transport management solution designed by L K Simulations, focusing on streamlining staff transportation logistics.',
+    imageUrl: preview1,
+    // projectUrl: 'https://example.com',
+    category: 'Work Project',
+    featuredProject: false,
+    tech: [
+      'React',
+      'Redux',
+      'React Native',
+      'Express',
+      'MongoDB',
+      'Jest',
+      'Enzyme',
+      'Docker',
+      'Javascript',
+      'HTML',
+      'CSS',
+    ],
+    detailedDescription:
+      'Spearheaded the design and development of the Staff Transport Management System, a product by L K Simulations to optimize staff transportation operations. The project involved contributions to the web and mobile applications and the backend API, utilizing a stack comprising React, Redux, React Native for frontend, and Express with MongoDB for backend, along with Jest and Enzyme for testing, all containerized using Docker.',
+    tasks: [
+      {
+        key: 'System Design and Development',
+        value:
+          'Led the architectural design of the Staff Transport Management System, ensuring a user-friendly interface and robust backend.',
+      },
+      {
+        key: 'Full-Stack Application Contribution',
+        value:
+          'Actively contributed to the development of web and mobile applications, as well as the backend API, leveraging a diverse technology stack for seamless functionality.',
+      },
+    ],
+  },
+  {
+    id: 'proj-11',
+    title: 'Electronic Logbook and Fishery Management Support System',
+    description:
+      'A research project for the Department of Fisheries & Aquatic Resources (DFAR), Sri Lanka, focusing on improving fishery management and reporting.',
+    imageUrl: preview1,
+    // projectUrl: 'https://example.com',
+    category: 'Research Project',
+    featuredProject: false,
+    tech: ['Java SE', 'MySQL', 'Android', 'PHP', 'JavaScript', 'HTML', 'CSS'],
+    detailedDescription:
+      'Led the design and development of the Electronic Logbook and Fishery Management Support System for DFAR, Sri Lanka. My role encompassed system design, development, deployment, user training, and presenting the solution to the EU delegation for reviewing the ban on fishery exports.',
+    tasks: [
+      {
+        key: 'System Design and Development',
+        value:
+          'Architected and developed the Electronic Logbook and Fishery Management Support System, tailoring it to the specific needs of DFAR.',
+      },
+      {
+        key: 'Deployment and Training',
+        value: 'Handled the deployment of the system and conducted comprehensive training sessions for the end-users.',
+      },
+      {
+        key: 'Presentation to EU Delegation',
+        value:
+          'Presented the system to the EU delegation as part of the review process for the ban on fishery exports, highlighting its effectiveness and compliance.',
+      },
+    ],
+  },
+  {
+    id: 'proj-12',
+    title: 'Siyara Vessel Traffic Management System',
+    description:
+      'An award-winning research project from the University of Colombo School of Computing, in collaboration with Sri Lanka Ports Authority and Sri Lanka Coast Guard, focused on enhancing maritime traffic management.',
+    imageUrl: preview1,
+    // projectUrl: 'https://example.com',
+    category: 'Research Project',
+    featuredProject: false,
+    tech: ['Android', 'PHP', 'MySQL', 'C++', 'OpenCPN', 'OGRE3D', 'C# WPF'],
+    detailedDescription:
+      'Involved in the Siyara Vessel Traffic Management System, an acclaimed research initiative. Responsibilities included revamping existing components, implementing new features, deploying the system, and training users, in collaboration with key maritime authorities.',
+    tasks: [
+      {
+        key: 'Component Revamp and Implementation',
+        value:
+          "Revamped several critical components and implemented new functionalities to enhance the system's efficiency and reliability.",
+      },
+      {
+        key: 'System Deployment and User Training',
+        value:
+          'Managed the deployment of the system and conducted user training sessions for effective usage and operation.',
+      },
+    ],
+  },
+  {
+    id: 'proj-13',
+    title: 'Vidusayura Ship Handling Simulator',
+    description:
+      'An award-winning research project from the University of Colombo School of Computing, in collaboration with Ocean University, Sri Lanka, focused on developing a state-of-the-art ship handling simulator.',
+    imageUrl: preview1,
+    // projectUrl: 'https://example.com',
+    category: 'Research Project',
+    featuredProject: false,
+    tech: ['C++', 'OpenCPN', 'WxWidgets', 'OGRE3D'],
+    detailedDescription:
+      'Engaged in the development of the Vidusayura Ship Handling Simulator, contributing significantly to the project by developing an ECDIS component, deploying the system, and conducting user training sessions, in collaboration with Ocean University, Sri Lanka.',
+    tasks: [
+      {
+        key: 'ECDIS Component Development',
+        value:
+          "Developed the Electronic Chart Display and Information System (ECDIS) component, enhancing the simulator's navigation capabilities.",
+      },
+      {
+        key: 'System Deployment and Training',
+        value:
+          'Handled the deployment of the simulator and provided comprehensive training to users, ensuring effective operation and utilization.',
+      },
+    ],
+  },
 ];
