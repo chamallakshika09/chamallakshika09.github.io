@@ -49,7 +49,6 @@ export const Education = () => {
         ))}
       </Grid>
 
-      {/* Modal for displaying more information about an educational experience */}
       {selectedEducation && (
         <Modal
           open={openModal}
@@ -72,11 +71,27 @@ export const Education = () => {
             }}
           >
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              {selectedEducation.degree} - Detailed View
+              {selectedEducation.degree}
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              {/* Include more detailed information here */}
+            <Box
+              component="img"
+              sx={{
+                height: 233,
+                width: 'auto',
+                maxHeight: { xs: 233, md: 167 },
+                // maxWidth: { xs: 350, md: 250 },
+              }}
+              alt="Education logo"
+              src={selectedEducation.logo}
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }} textAlign="justify">
+              {selectedEducation.detailedDescription}
             </Typography>
+            {selectedEducation.detailedDescription1 && (
+              <Typography id="modal-modal-description" sx={{ mt: 2 }} textAlign="justify">
+                {selectedEducation.detailedDescription1}
+              </Typography>
+            )}
           </Box>
         </Modal>
       )}

@@ -42,47 +42,47 @@ export const Achievements = () => {
         ))}
       </Grid>
 
-      {/* Modal for displaying badges or certificates */}
-      <Modal
-        open={openModal}
-        onClose={handleCloseModal}
-        aria-labelledby="achievement-modal-title"
-        aria-describedby="achievement-modal-description"
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: { xs: '90%', sm: '80%', md: '70%', lg: '60%' },
-            bgcolor: 'background.paper',
-            boxShadow: 24,
-            p: 4,
-            maxHeight: '90vh',
-            overflowY: 'auto',
-          }}
+      {selectedAchievement && (
+        <Modal
+          open={openModal}
+          onClose={handleCloseModal}
+          aria-labelledby="achievement-modal-title"
+          aria-describedby="achievement-modal-description"
         >
-          {selectedAchievement && (
-            <>
-              <Typography id="achievement-modal-title" variant="h6" component="h2">
-                {selectedAchievement.title}
-              </Typography>
-              <Box
-                component="img"
-                sx={{
-                  height: 233,
-                  width: 'auto',
-                  maxHeight: { xs: 233, md: 167 },
-                  maxWidth: { xs: 350, md: 250 },
-                }}
-                alt="Achievement badge"
-                src={selectedAchievement.badge}
-              />
-            </>
-          )}
-        </Box>
-      </Modal>
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: { xs: '90%', sm: '80%', md: '70%', lg: '60%' },
+              bgcolor: 'background.paper',
+              boxShadow: 24,
+              p: 4,
+              maxHeight: '90vh',
+              overflowY: 'auto',
+            }}
+          >
+            <Typography id="achievement-modal-title" variant="h6" component="h2">
+              {selectedAchievement.title}
+            </Typography>
+            <Box
+              component="img"
+              sx={{
+                height: 233,
+                width: 'auto',
+                maxHeight: { xs: 233, md: 167 },
+                // maxWidth: { xs: 350, md: 250 },
+              }}
+              alt="Achievement badge"
+              src={selectedAchievement.badge}
+            />
+            <Typography id="achievement-modal-description" sx={{ mt: 2 }} textAlign="justify">
+              {selectedAchievement.detailedDescription}
+            </Typography>
+          </Box>
+        </Modal>
+      )}
     </HeaderLayout>
   );
 };

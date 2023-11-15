@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
-import { articleData } from 'data/article-data';
 import { HeaderLayout } from 'layouts';
+import { articleData } from 'data';
 
 export const Articles = () => {
   return (
@@ -21,7 +21,7 @@ export const Articles = () => {
                   <Typography gutterBottom variant="h5" component="h2">
                     {article.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" textAlign="justify">
                     {article.summary}
                   </Typography>
                 </CardContent>
