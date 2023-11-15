@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Box,
   Grid,
   Card,
   CardActionArea,
@@ -7,11 +8,16 @@ import {
   CardMedia,
   Typography,
   Modal,
-  Box,
   Tabs,
   Tab,
   Chip,
+  List,
+  ListItem,
+  ListItemText,
+  Paper,
+  ListItemIcon,
 } from '@mui/material';
+import CircleIcon from '@mui/icons-material/Circle';
 import Header from 'components/header';
 import { projectsData } from 'data';
 
@@ -56,25 +62,31 @@ export const Projects = () => {
 
       <Grid container spacing={2} sx={{ padding: '1rem' }}>
         {filteredProjects.map((project) => (
-          <Grid item xs={12} sm={6} md={4} key={project.id}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea onClick={() => handleOpenModal(project)}>
-                <CardMedia component="img" height="140" image={project.imageUrl} alt={project.title} />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {project.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {project.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={project.id}>
+            <Paper elevation={3} sx={{ ':hover': { transform: 'scale(1.05)', transition: '0.3s' } }}>
+              <Card>
+                <CardActionArea onClick={() => handleOpenModal(project)}>
+                  <CardMedia
+                    component="img"
+                    image={project.imageUrl}
+                    alt={project.title}
+                    sx={{ height: 140, width: 'auto' }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {project.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Paper>
           </Grid>
         ))}
       </Grid>
 
-      {/* Modal for displaying more information about a project */}
       {selectedProject && (
         <Modal
           open={openModal}
@@ -88,19 +100,36 @@ export const Projects = () => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: 'auto',
+              width: { xs: '90%', sm: '80%', md: '70%', lg: '60%' },
               bgcolor: 'background.paper',
               boxShadow: 24,
               p: 4,
-              maxWidth: '90vw',
+              maxHeight: '90vh',
+              overflowY: 'auto', // Scroll inside modal if content is too long
             }}
           >
             <Typography id="project-modal-title" variant="h6" component="h2">
               {selectedProject.title}
             </Typography>
-            <Typography id="project-modal-description" sx={{ mt: 2 }}>
+            <Typography id="project-modal-description" sx={{ mt: 2 }} textAlign="justify">
               {selectedProject.detailedDescription}
             </Typography>
+            <Typography sx={{ mt: 2, fontWeight: 'bold' }}>Key Tasks:</Typography>
+            <List disablePadding>
+              {selectedProject.tasks.map(({ key, value }) => (
+                <ListItem key={key} disablePadding>
+                  <ListItemIcon>
+                    <CircleIcon sx={{ fontSize: 16 }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={key}
+                    secondary={value}
+                    primaryTypographyProps={{ sx: { fontWeight: 'bold' } }}
+                    secondaryTypographyProps={{ textAlign: 'justify' }}
+                  />
+                </ListItem>
+              ))}
+            </List>
             <Typography sx={{ mt: 2, fontWeight: 'bold' }}>Tools and Technologies:</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1 }}>
               {selectedProject.tech.map((technology, index) => (
