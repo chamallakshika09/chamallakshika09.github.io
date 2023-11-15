@@ -11,28 +11,30 @@ export const ProjectsPreview = () => {
         Featured Projects
       </Typography>
       <Grid container spacing={4} justifyContent="center">
-        {projectsData.map((project, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
-            <Card>
-              <CardActionArea href={project.projectUrl}>
-                <CardMedia
-                  component="img"
-                  image={project.imageUrl}
-                  alt={project.title}
-                  sx={{ height: 100, width: 'auto' }}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {project.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {project.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
+        {projectsData
+          .filter((project) => project.featuredProject)
+          .map((project, index) => (
+            <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+              <Card>
+                <CardActionArea href={project.projectUrl}>
+                  <CardMedia
+                    component="img"
+                    image={project.imageUrl}
+                    alt={project.title}
+                    sx={{ height: 100, width: 'auto' }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {project.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
       </Grid>
 
       <Button variant="contained" onClick={() => navigate('/projects')} sx={{ mt: 2 }}>
