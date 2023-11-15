@@ -28,7 +28,7 @@ const menuItems = [
   { key: 'articles', text: 'Articles', link: '/articles' },
 ];
 
-const Header = () => {
+export const Header = () => {
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -99,5 +99,3 @@ const Header = () => {
     </AppBar>
   );
 };
-
-export default Header;

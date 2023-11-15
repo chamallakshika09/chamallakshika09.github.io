@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
-import { Footer } from 'components';
-import Header from 'components/header';
+import { Footer, Header } from 'components';
+
 import { getAppbarHeight } from 'utils';
 
 export const HeaderLayout = ({ children }) => {
@@ -9,13 +9,13 @@ export const HeaderLayout = ({ children }) => {
       <Header />
       <Stack
         flexDirection="column"
+        justifyContent="space-between"
         sx={{
           width: '100%',
-          // marginTop: (theme) => `${getAppbarHeight(theme)}`,
-          height: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
+          minHeight: (theme) => `calc(100vh - ${getAppbarHeight(theme)})`,
         }}
       >
-        {children}
+        <div style={{ flex: 1 }}>{children}</div>
         <Footer />
       </Stack>
     </>
