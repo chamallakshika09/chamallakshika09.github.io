@@ -1,14 +1,13 @@
 import React from 'react';
 import { Box, Container, Grid, Typography, Avatar, Button } from '@mui/material';
 import { Download as DownloadIcon } from '@mui/icons-material';
-import Header from 'components/header';
 import { HobbiesAndInterests, PersonalQuoteAndGoals } from 'components';
 import ProfilePhoto from 'assets/my-photo.png';
+import { HeaderLayout } from 'layouts';
 
 export const AboutMe = () => {
   return (
-    <Box>
-      <Header />
+    <HeaderLayout>
       <Container maxWidth="lg">
         <Box py={6} textAlign="center">
           <Avatar sx={{ width: 150, height: 150, margin: 'auto' }} src={ProfilePhoto} alt="Chamal Perera" />
@@ -39,6 +38,6 @@ export const AboutMe = () => {
           </Grid>
         </Grid>
       </Container>
-    </Box>
+    </HeaderLayout>
   );
 };

@@ -18,8 +18,8 @@ import {
   ListItemIcon,
 } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
-import Header from 'components/header';
 import { projectsData } from 'data';
+import { HeaderLayout } from 'layouts';
 
 const getTabs = () => {
   const tabs = new Set();
@@ -51,8 +51,7 @@ export const Projects = () => {
 
   const filteredProjects = projectsData.filter((project) => tabValue === 'All' || project.category === tabValue);
   return (
-    <Box>
-      <Header />
+    <HeaderLayout>
       <Tabs value={tabValue} onChange={handleChangeTab} centered>
         <Tab label="All" value="All" />
         {getTabs().map((tab) => (
@@ -105,7 +104,7 @@ export const Projects = () => {
               boxShadow: 24,
               p: 4,
               maxHeight: '90vh',
-              overflowY: 'auto', // Scroll inside modal if content is too long
+              overflowY: 'auto',
             }}
           >
             <Typography id="project-modal-title" variant="h6" component="h2">
@@ -139,6 +138,6 @@ export const Projects = () => {
           </Box>
         </Modal>
       )}
-    </Box>
+    </HeaderLayout>
   );
 };

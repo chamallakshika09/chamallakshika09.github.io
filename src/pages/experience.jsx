@@ -1,13 +1,12 @@
 import { Paper, Typography, Box } from '@mui/material';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
 import WorkIcon from '@mui/icons-material/Work';
-import Header from 'components/header';
 import { experienceData } from 'data';
+import { HeaderLayout } from 'layouts';
 
 export const Experience = () => {
   return (
-    <Box>
-      <Header />
+    <HeaderLayout>
       <Box sx={{ width: '100%', margin: 'auto', my: 4 }}>
         <Typography variant="h4" align="center" gutterBottom>
           Professional Experience
@@ -39,6 +38,6 @@ export const Experience = () => {
           ))}
         </Timeline>
       </Box>
-    </Box>
+    </HeaderLayout>
   );
 };

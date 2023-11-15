@@ -1,4 +1,4 @@
-import { AboutMePreview, ContactCTA, Footer, HeroSection, ProjectsPreview } from 'components';
+import { AboutMePreview, ContactCTA, HeroSection, ProjectsPreview } from 'components';
 import { HeaderLayout } from 'layouts';
 
 export const Home = () => {
@@ -8,7 +8,6 @@ export const Home = () => {
       <AboutMePreview />
       <ProjectsPreview />
       <ContactCTA />
-      <Footer />
     </HeaderLayout>
   );
 };

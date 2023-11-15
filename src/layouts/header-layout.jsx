@@ -1,4 +1,5 @@
 import Stack from '@mui/material/Stack';
+import { Footer } from 'components';
 import Header from 'components/header';
 import { getAppbarHeight } from 'utils';
 
@@ -15,6 +16,7 @@ export const HeaderLayout = ({ children }) => {
         }}
       >
         {children}
+        <Footer />
       </Stack>
     </>
   );

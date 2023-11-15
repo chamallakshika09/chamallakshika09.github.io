@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid, Card, CardContent, CardMedia, Typography, Button, Modal, Box } from '@mui/material';
-import Header from 'components/header';
+import { Grid, Card, CardContent, CardMedia, Typography, Modal, Box, CardActionArea } from '@mui/material';
 import { educationData } from 'data';
+import { HeaderLayout } from 'layouts';
 
 export const Education = () => {
   const [openModal, setOpenModal] = React.useState(false);
@@ -17,30 +17,33 @@ export const Education = () => {
   };
 
   return (
-    <Box>
-      <Header />
+    <HeaderLayout>
       <Grid container spacing={2} sx={{ padding: '1rem' }}>
         {educationData.map((edu) => (
-          <Grid item xs={12} sm={6} md={4} key={edu.id}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardMedia component="img" image={edu.logo} alt={`${edu.institution} logo`} sx={{ width: '100%' }} />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {edu.degree}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {edu.institution}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {edu.period}
-                </Typography>
-                <Typography variant="body1" sx={{ marginTop: '0.5rem' }}>
-                  {edu.description}
-                </Typography>
-                <Button size="small" onClick={() => handleOpenModal(edu)}>
-                  Learn More
-                </Button>
-              </CardContent>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={edu.id}>
+            <Card>
+              <CardActionArea onClick={() => handleOpenModal(edu)}>
+                <CardMedia
+                  component="img"
+                  image={edu.logo}
+                  alt={`${edu.institution} logo`}
+                  sx={{ height: 100, width: 'auto' }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {edu.degree}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {edu.institution}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {edu.period}
+                  </Typography>
+                  <Typography variant="body1" sx={{ marginTop: '0.5rem' }}>
+                    {edu.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Card>
           </Grid>
         ))}
@@ -60,10 +63,12 @@ export const Education = () => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: 400,
+              width: { xs: '90%', sm: '80%', md: '70%', lg: '60%' },
               bgcolor: 'background.paper',
               boxShadow: 24,
               p: 4,
+              maxHeight: '90vh',
+              overflowY: 'auto',
             }}
           >
             <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -75,6 +80,6 @@ export const Education = () => {
           </Box>
         </Modal>
       )}
-    </Box>
+    </HeaderLayout>
   );
 };

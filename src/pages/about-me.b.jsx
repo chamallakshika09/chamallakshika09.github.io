@@ -1,13 +1,13 @@
 import { Box, Container, Typography, Avatar, Grid, Button } from '@mui/material';
 import GetAppIcon from '@mui/icons-material/GetApp';
-import Header from 'components/header';
+
 import ProfilePhoto from 'assets/my-photo.png';
 import { EducationTimeline, ExperienceTimelIne, HobbiesAndInterestsB, SkillsSection } from 'components';
+import { HeaderLayout } from 'layouts';
 
 export const AboutMeB = () => {
   return (
-    <Box>
-      <Header />
+    <HeaderLayout>
       <Container maxWidth="lg">
         <Box sx={{ my: 5 }}>
           <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -131,6 +131,6 @@ export const AboutMeB = () => {
 
         <HobbiesAndInterestsB />
       </Container>
-    </Box>
+    </HeaderLayout>
   );
 };

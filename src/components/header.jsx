@@ -25,7 +25,7 @@ const menuItems = [
   { key: 'education', text: 'Education', link: '/education' },
   { key: 'projects', text: 'Projects', link: '/projects' },
   { key: 'achievements', text: 'Achievements', link: '/achievements' },
-  { key: 'contact', text: 'Contact', link: '/contact' },
+  { key: 'articles', text: 'Articles', link: '/articles' },
 ];
 
 const Header = () => {
