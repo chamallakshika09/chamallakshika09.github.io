@@ -12,7 +12,6 @@ const { Projects } = lazyImport(() => import('pages'), 'Projects');
 const { Achievements } = lazyImport(() => import('pages'), 'Achievements');
 const { Contact } = lazyImport(() => import('pages'), 'Contact');
 const { AboutMeB } = lazyImport(() => import('pages'), 'AboutMeB');
-const { HomeB } = lazyImport(() => import('pages'), 'HomeB');
 
 const routes = [
   {
