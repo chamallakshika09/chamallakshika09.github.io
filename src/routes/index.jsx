@@ -119,19 +119,6 @@ const routes = [
       </Suspense>
     ),
   },
-  {
-    path: '/h',
-    element: (
-      <Suspense fallback={null}>
-        <HomeB />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={null}>
-        <NotFound />
-      </Suspense>
-    ),
-  },
 ];
 
 export const router = createBrowserRouter(routes);
