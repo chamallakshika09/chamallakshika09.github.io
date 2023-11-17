@@ -51,7 +51,13 @@ export const Projects = () => {
   const filteredProjects = projectsData.filter((project) => tabValue === 'All' || project.category === tabValue);
   return (
     <HeaderLayout>
-      <Tabs value={tabValue} onChange={handleChangeTab} centered>
+      <Tabs
+        value={tabValue}
+        onChange={handleChangeTab}
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
+      >
         <Tab label="All" value="All" />
         {getTabs().map((tab) => (
           <Tab key={tab} label={tab} value={tab} />

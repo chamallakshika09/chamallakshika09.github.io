@@ -30,12 +30,7 @@ export const Education = () => {
                 ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
               }}
             >
-              <CardMedia
-                component="img"
-                image={edu.logo}
-                alt={`${edu.institution} logo`}
-                sx={{ height: 100, width: 'auto' }}
-              />
+              <CardMedia component="img" image={edu.logo} alt={`${edu.institution} logo`} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {edu.degree}
