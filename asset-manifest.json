@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/chamal/static/css/main.e6c13ad2.css",
+    "main.js": "/chamal/static/js/main.1a8c571a.js",
+    "static/css/77.b11690b9.chunk.css": "/chamal/static/css/77.b11690b9.chunk.css",
+    "static/js/77.06cdcb1e.chunk.js": "/chamal/static/js/77.06cdcb1e.chunk.js",
+    "static/js/787.289d49a7.chunk.js": "/chamal/static/js/787.289d49a7.chunk.js",
+    "static/js/946.348466d5.chunk.js": "/chamal/static/js/946.348466d5.chunk.js",
+    "static/media/my-photo.png": "/chamal/static/media/my-photo.79e737fd58a18dcd1164.png",
+    "static/media/nbqsa-og.jpg": "/chamal/static/media/nbqsa-og.7a446ef096fe3644c174.jpg",
+    "static/media/apicta.jpg": "/chamal/static/media/apicta.15a273a2adf737fd27ec.jpg",
+    "static/media/resume.pdf": "/chamal/static/media/resume.fd984ab19a70ab00603e.pdf",
+    "static/media/project1-preview.png": "/chamal/static/media/project1-preview.51590cc1927909079780.png",
+    "static/media/project2-preview.png": "/chamal/static/media/project2-preview.7ba7097c9d6c6716864a.png",
+    "static/media/nbqsa-r&d.jpg": "/chamal/static/media/nbqsa-r&d.2363d11195a024ff79ec.jpg",
+    "static/media/nbqsa-badge.png": "/chamal/static/media/nbqsa-badge.1d79b739097b5feea40f.png",
+    "static/media/slick.svg": "/chamal/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/chamal/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/chamal/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/chamal/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/chamal/index.html",
+    "main.e6c13ad2.css.map": "/chamal/static/css/main.e6c13ad2.css.map",
+    "main.1a8c571a.js.map": "/chamal/static/js/main.1a8c571a.js.map",
+    "77.b11690b9.chunk.css.map": "/chamal/static/css/77.b11690b9.chunk.css.map",
+    "77.06cdcb1e.chunk.js.map": "/chamal/static/js/77.06cdcb1e.chunk.js.map",
+    "787.289d49a7.chunk.js.map": "/chamal/static/js/787.289d49a7.chunk.js.map",
+    "946.348466d5.chunk.js.map": "/chamal/static/js/946.348466d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.1a8c571a.js"
+  ]
+}
