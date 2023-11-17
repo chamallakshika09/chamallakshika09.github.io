@@ -3,4 +3,4 @@ export * from './about-me-data';
 export * from './project-data';
 export * from './achievement-data';
 export * from './education-data';
-export * from './article-data';
+export * from './publication-data';

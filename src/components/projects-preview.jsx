@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, CardActionArea, CardMedia, CardContent, Button, Stack } from '@mui/material';
+import { Typography, Card, CardContent, Button, Stack, CardActions } from '@mui/material';
 import Slider from 'react-slick';
 import { projectsData } from 'data';
 import { useNavigate } from 'react-router-dom';
@@ -50,7 +50,7 @@ export const ProjectsPreview = () => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -74,28 +74,40 @@ export const ProjectsPreview = () => {
         Featured Projects
       </Typography>
 
-      <Stack sx={{ width: '80%', flexGrow: 1 }}>
+      <Stack sx={{ width: { xs: '95%', sm: '90%', md: '85%' }, flexGrow: 1 }}>
         <Slider {...settings}>
           {projectsData
-            // .filter((project) => project.featuredProject)
+            .filter((project) => project.featuredProject)
             .map((project) => (
-              <Card key={project.id}>
-                <CardActionArea href={project.projectUrl}>
-                  <CardMedia
-                    component="img"
-                    image={project.imageUrl}
-                    alt={project.title}
-                    sx={{ height: 140, width: 'auto' }}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+              <Card
+                sx={{
+                  // height: '100% !important',
+                  // display: 'flex',
+                  // flexDirection: 'column',
+                  // justifyContent: 'space-between',
+                  width: { xs: '100%', sm: '95% !important' },
+                  ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
+                }}
+              >
+                {/* <CardMedia
+      component="img"
+      image={project.imageUrl}
+      alt={project.title}
+      sx={{ height: 140, width: 'auto' }}
+    /> */}
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {project.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" onClick={() => window.open(project.projectUrl)}>
+                    Read More
+                  </Button>
+                </CardActions>
               </Card>
             ))}
         </Slider>

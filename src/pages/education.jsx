@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, CardContent, CardMedia, Typography, Modal, Box, CardActionArea } from '@mui/material';
+import { Grid, Card, CardContent, CardMedia, Typography, Modal, Box, CardActions, Button } from '@mui/material';
 import { educationData } from 'data';
 import { HeaderLayout } from 'layouts';
 
@@ -18,32 +18,43 @@ export const Education = () => {
 
   return (
     <HeaderLayout>
-      <Grid container spacing={2} sx={{ padding: '1rem' }}>
+      <Grid container spacing={2} justifyContent="center" sx={{ p: 4 }}>
         {educationData.map((edu) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={edu.id}>
-            <Card>
-              <CardActionArea onClick={() => handleOpenModal(edu)}>
-                <CardMedia
-                  component="img"
-                  image={edu.logo}
-                  alt={`${edu.institution} logo`}
-                  sx={{ height: 100, width: 'auto' }}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {edu.degree}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {edu.institution}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {edu.period}
-                  </Typography>
-                  <Typography variant="body1" sx={{ marginTop: '0.5rem' }}>
-                    {edu.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+            <Card
+              sx={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
+              }}
+            >
+              <CardMedia
+                component="img"
+                image={edu.logo}
+                alt={`${edu.institution} logo`}
+                sx={{ height: 100, width: 'auto' }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {edu.degree}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {edu.institution}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {edu.period}
+                </Typography>
+                <Typography variant="body1" sx={{ marginTop: '0.5rem' }}>
+                  {edu.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" onClick={() => handleOpenModal(edu)}>
+                  Read More
+                </Button>
+              </CardActions>
             </Card>
           </Grid>
         ))}

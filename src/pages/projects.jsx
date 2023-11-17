@@ -3,9 +3,7 @@ import {
   Box,
   Grid,
   Card,
-  CardActionArea,
   CardContent,
-  CardMedia,
   Typography,
   Modal,
   Tabs,
@@ -14,8 +12,9 @@ import {
   List,
   ListItem,
   ListItemText,
-  Paper,
   ListItemIcon,
+  CardActions,
+  Button,
 } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import { projectsData } from 'data';
@@ -59,29 +58,38 @@ export const Projects = () => {
         ))}
       </Tabs>
 
-      <Grid container spacing={2} sx={{ padding: '1rem' }}>
+      <Grid container spacing={2} justifyContent="center" sx={{ p: 4 }}>
         {filteredProjects.map((project) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={project.id}>
-            <Paper elevation={3} sx={{ ':hover': { transform: 'scale(1.05)', transition: '0.3s' } }}>
-              <Card>
-                <CardActionArea onClick={() => handleOpenModal(project)}>
-                  <CardMedia
+            <Card
+              sx={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
+              }}
+            >
+              {/* <CardMedia
                     component="img"
                     image={project.imageUrl}
                     alt={project.title}
                     sx={{ height: 140, width: 'auto' }}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Paper>
+                  /> */}
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {project.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {project.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" onClick={() => handleOpenModal(project)}>
+                  Read More
+                </Button>
+              </CardActions>
+            </Card>
           </Grid>
         ))}
       </Grid>

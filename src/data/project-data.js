@@ -9,7 +9,7 @@ export const projectsData = [
     imageUrl: preview1,
     projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
-    featuredProject: true,
+    featuredProject: false,
     tech: [
       'React.js',
       'Node.js',
@@ -80,7 +80,7 @@ export const projectsData = [
     imageUrl: preview2,
     // projectUrl: '#/projects/project-two',
     category: 'Work Project',
-    featuredProject: true,
+    featuredProject: false,
     tech: [
       'React.js',
       'Node.js',
@@ -380,8 +380,7 @@ export const projectsData = [
     category: 'Work Project',
     featuredProject: false,
     tech: ['React', 'Redux', 'React Native', 'Firebase', 'Javascript', 'HTML', 'CSS'],
-    detailedDescription:
-      "Led the design and development of L K Simulations' Canvassing Management System, a comprehensive tool for managing canvassing activities. The system features both web and mobile applications, built using React and React Native, with Redux for state management and Firebase for backend services.",
+    detailedDescription: `System seamlessly integrates a trio of applications to cater to diverse user needs. The web application, built with React, offers a dynamic and responsive user interface, while the accompanying mobile application, developed in React Native, ensures a consistent and engaging experience across both iOS and Android devices. The backbone of our system, an Express.js-based backend, efficiently handles server-side logic, interfacing smoothly with Firebase for robust data storage and deployment solutions. This cohesive blend of technologies ensures a scalable, responsive, and user-friendly platform, delivering a seamless experience across web and mobile interfaces.`,
     tasks: [
       {
         key: 'System Design',
@@ -417,8 +416,7 @@ export const projectsData = [
       'HTML',
       'CSS',
     ],
-    detailedDescription:
-      'Spearheaded the design and development of the Staff Transport Management System, a product by L K Simulations to optimize staff transportation operations. The project involved contributions to the web and mobile applications and the backend API, utilizing a stack comprising React, Redux, React Native for frontend, and Express with MongoDB for backend, along with Jest and Enzyme for testing, all containerized using Docker.',
+    detailedDescription: `Staff Transport Management System is a comprehensive solution designed to streamline transport operations. It features a robust web application built with React, ensuring a responsive and user-friendly interface for desktop users. Complementing this is a mobile application developed using React Native, providing a seamless and efficient experience on both iOS and Android platforms. The system's backbone is an Express.js-based backend, which efficiently handles all server-side operations and interacts seamlessly with MongoDB, our chosen database for reliable data management. Together, this integration of technologies creates a cohesive and effective system for managing staff transportation needs.`,
     tasks: [
       {
         key: 'System Design and Development',
@@ -442,22 +440,30 @@ export const projectsData = [
     category: 'Research Project',
     featuredProject: false,
     tech: ['Java SE', 'MySQL', 'Android', 'PHP', 'JavaScript', 'HTML', 'CSS'],
-    detailedDescription:
-      'Led the design and development of the Electronic Logbook and Fishery Management Support System for DFAR, Sri Lanka. My role encompassed system design, development, deployment, user training, and presenting the solution to the EU delegation for reviewing the ban on fishery exports.',
+    detailedDescription: `System is an integrated suite of applications designed to cater to diverse operational needs. It includes a set of Android mobile applications, offering on-the-go functionality and accessibility. Complementing the mobile apps is a PHP-based web application, dedicated to monitoring and management tasks, ensuring centralized control and oversight. Additionally, the system features several Java desktop applications, providing robust functionality for more complex operations. All these components are unified through a MySQL database, which serves as a reliable backbone for data storage and retrieval, ensuring seamless data flow and consistency across the different applications.`,
     tasks: [
       {
-        key: 'System Design and Development',
+        key: 'System Architecture and Database Design',
         value:
-          'Architected and developed the Electronic Logbook and Fishery Management Support System, tailoring it to the specific needs of DFAR.',
+          'Collaboratively architected the system and designed its database, laying a robust foundation for efficient data management and system functionality.',
       },
       {
-        key: 'Deployment and Training',
-        value: 'Handled the deployment of the system and conducted comprehensive training sessions for the end-users.',
+        key: 'Java Desktop Application Development',
+        value:
+          'Developed a Java desktop application for management information collection, enhancing the system’s data aggregation capabilities.',
+      },
+      {
+        key: 'Mobile Application Contribution',
+        value:
+          'Actively contributed to the development of mobile applications, focusing on user-centric features and seamless data integration.',
+      },
+      {
+        key: 'System Deployment and Stakeholder Training',
+        value: `Managed the system's deployment and conducted training sessions for stakeholders, ensuring effective usage and smooth operation.`,
       },
       {
         key: 'Presentation to EU Delegation',
-        value:
-          'Presented the system to the EU delegation as part of the review process for the ban on fishery exports, highlighting its effectiveness and compliance.',
+        value: `Presented the system to the EU delegation, demonstrating its capabilities and compliance as part of the review process for the ban on fishery exports.`,
       },
     ],
   },
@@ -471,18 +477,37 @@ export const projectsData = [
     category: 'Research Project',
     featuredProject: false,
     tech: ['Android', 'PHP', 'MySQL', 'C++', 'OpenCPN', 'OGRE3D', 'C# WPF'],
-    detailedDescription:
-      'Involved in the Siyara Vessel Traffic Management System, an acclaimed research initiative. Responsibilities included revamping existing components, implementing new features, deploying the system, and training users, in collaboration with key maritime authorities.',
+    detailedDescription: `System features a diverse array of applications tailored for specialized monitoring and data collection. Central to this system is a C++ AIS Decoder application, designed for efficient signal processing. We complemented this with a 2D monitoring application, developed using C++ and WXWidgets, offering streamlined surveillance capabilities. For more immersive monitoring, a 3D application was created using C++ and Ogre3D, providing detailed visual representations. Additionally, the suite includes Android mobile applications, designed for on-the-go monitoring and data collection. The entire system is underpinned by a MySQL database, ensuring consistent and reliable data management across all applications.`,
     tasks: [
       {
-        key: 'Component Revamp and Implementation',
+        key: '2D Monitoring Application Revamp',
         value:
-          "Revamped several critical components and implemented new functionalities to enhance the system's efficiency and reliability.",
+          'Revamped the existing 2D monitoring application, enhancing its performance and capabilities for more efficient surveillance.',
       },
       {
-        key: 'System Deployment and User Training',
+        key: 'Android Monitoring Application Contribution',
         value:
-          'Managed the deployment of the system and conducted user training sessions for effective usage and operation.',
+          'Actively contributed to the development of the Android monitoring application, focusing on improving its functionality and user experience.',
+      },
+      {
+        key: 'Data Collection Mobile Applications Development',
+        value:
+          'Implemented specialized mobile applications for tugs, pilot vessels, and monitoring stations to streamline the data collection process.',
+      },
+      {
+        key: 'AIS Decoder Enhancement',
+        value:
+          'Contributed to the enhancement of the AIS decoder application, extending its capabilities to decode additional AIS messages.',
+      },
+      {
+        key: 'System Deployment at SL Coast Guard Headquarters',
+        value:
+          'Managed the deployment of the entire system at the Sri Lanka Coast Guard headquarters in Mirissa, ensuring seamless integration and functionality.',
+      },
+      {
+        key: 'User Training for SLCG Personnel',
+        value:
+          'Conducted comprehensive training sessions for Sri Lanka Coast Guard personnel, ensuring effective system utilization and operation.',
       },
     ],
   },
@@ -496,18 +521,164 @@ export const projectsData = [
     category: 'Research Project',
     featuredProject: false,
     tech: ['C++', 'OpenCPN', 'WxWidgets', 'OGRE3D'],
-    detailedDescription:
-      'Engaged in the development of the Vidusayura Ship Handling Simulator, contributing significantly to the project by developing an ECDIS component, deploying the system, and conducting user training sessions, in collaboration with Ocean University, Sri Lanka.',
+    detailedDescription: ` system was a comprehensive suite of applications, each tailored for specific simulation and monitoring functionalities within a robust framework. It included a 3D simulator, both client and server, developed using C++ and Ogre3D, offering high-quality, real-time visualizations. Complementing this was a 2D Electronic Chart Display (ECDIS) application, crafted with C++ and WXWidgets, providing detailed navigational information and charting capabilities. Additionally, the system featured Android mobile applications designed for displaying various instrument readouts, enhancing accessibility and convenience. Central to all these components was a MySQL database, which ensured consistent and efficient data management across the entire system, maintaining data integrity and streamlined operations.`,
     tasks: [
       {
-        key: 'ECDIS Component Development',
+        key: 'Electronic Chart Display Development',
         value:
-          "Developed the Electronic Chart Display and Information System (ECDIS) component, enhancing the simulator's navigation capabilities.",
+          'Developed the Electronic Chart Display and Information System (ECDIS), a crucial component that significantly enhanced the simulator’s navigational functionalities and user interface.',
       },
       {
-        key: 'System Deployment and Training',
+        key: 'Instrument Display Mobile Applications Development',
         value:
-          'Handled the deployment of the simulator and provided comprehensive training to users, ensuring effective operation and utilization.',
+          'Created and fine-tuned mobile applications for instrument displays, focusing on user-friendly interfaces and real-time data presentation to augment the overall simulation experience.',
+      },
+      {
+        key: '3D Simulator Client and Server Contribution',
+        value:
+          'Contributed to the development of both the client and server sides of the 3D simulator, ensuring seamless integration and robust performance of the simulation environment.',
+      },
+      {
+        key: 'Deployment and Training at Ocean University, Sri Lanka',
+        value: `Managed the system's deployment at Ocean University, Sri Lanka, and conducted extensive training sessions for the personnel, facilitating effective system adoption and utilization.`,
+      },
+    ],
+  },
+  {
+    id: 'proj-14',
+    title: 'Gaudi Builder',
+    description: `In collaboration with a colleague, I developed an engaging multiplayer game that pays homage to the innovative architectural techniques of Antoni Gaudí. Drawing inspiration from Gaudí's revolutionary hanging chain model, our game challenges players to strategically place balls and ropes in a virtual space. The game's core mechanic revolves around the principles of the catenary curve, mimicking the way gravity shapes hanging chains. This not only adds a layer of architectural authenticity but also introduces a unique puzzle-solving element to the gameplay. As players manipulate these elements, they create intricate, gravity-defying structures reminiscent of the whimsical yet structurally sound designs found in Gaudí's iconic Sagrada Família. This project was not just a tribute to Gaudí's genius but also an exploration of the intersection between architectural ingenuity and interactive gaming experiences.`,
+    // imageUrl: preview1,
+    projectUrl: 'https://github.com/chamallakshika09/dbf-sample-game',
+    category: 'Personal Project',
+    featuredProject: true,
+    tech: [
+      'React.js',
+      'Node.js',
+      'Redux',
+      'Mongodb',
+      'Express.js',
+      'Three.js',
+      'AWS',
+      'Material UI',
+      'Javascript',
+      'HTML',
+      'CSS',
+      'socket.io',
+      'ammo.js',
+    ],
+    detailedDescription: `In our multiplayer game project, we implemented a client-server architecture for robust and efficient performance. The frontend was developed using React.js, offering a dynamic and responsive user interface, while the backend was built on Express.js, ensuring stable server-side operations. For real-time collaboration among players, we integrated Socket.io, which facilitated instantaneous communication and interaction within the game environment. The physics of the game, critical in mimicking realistic architectural structures, were handled using the ammo.js bullet physics library, allowing for accurate physical simulations. Additionally, we employed P5.js and Three.js for visualizations, with P5.js enabling creative 2D graphical representations and Three.js providing the framework for immersive 3D renderings, together enhancing the visual appeal and engagement of the game.`,
+    tasks: [
+      {
+        key: 'Project Setup and Configuration',
+        value:
+          'Led the initial setup and configuration of the project, establishing a robust foundation for development and collaboration.',
+      },
+      {
+        key: 'Socket.io Integration for Real-Time Collaboration',
+        value:
+          'Implemented Socket.io to facilitate real-time communication and interaction, enhancing the multiplayer aspect of the game.',
+      },
+      {
+        key: 'Frontend Development with React.js',
+        value:
+          'Developed the dynamic user interface using React.js, ensuring a responsive and engaging player experience.',
+      },
+      {
+        key: 'Backend Development with Express.js',
+        value:
+          'Developed the backend using Express.js, managing server-side logic and maintaining stable game performance.',
+      },
+      {
+        key: 'Physics Simulation with ammo.js',
+        value:
+          'Co-integrated ammo.js for realistic physics simulation, replicating the physical behaviors of balls and ropes in the game environment.',
+      },
+      {
+        key: 'Visualization Enhancement with P5.js and Three.js',
+        value:
+          'Utilized P5.js and Three.js for creating immersive 2D and 3D visualizations, adding aesthetic and interactive dimensions to the game.',
+      },
+      {
+        key: 'Collaborative Component Development',
+        value:
+          'Worked closely with a colleague to develop various components of the game, fostering teamwork and leveraging combined expertise.',
+      },
+    ],
+  },
+  {
+    id: 'proj-15',
+    title: 'Integrating Three.js with React, Redux and MUI ',
+    description: `This sample project serves as a practical demonstration for an article detailing the integration of Three.js with React, Redux, and MUI. It exemplifies how these technologies can be seamlessly combined to create visually rich and interactive 3D web applications, highlighting best practices and efficient methodologies.`,
+    // imageUrl: preview1,
+    projectUrl: 'https://github.com/chamallakshika09/react-threejs',
+    category: 'Personal Project',
+    featuredProject: true,
+    tech: ['React.js', 'Redux', 'Three.js', 'Material UI', 'Javascript', 'HTML', 'CSS'],
+    detailedDescription: `In this sample project, created specifically for an instructional article, we delve into the intricacies of integrating Three.js with React, Redux, and Material-UI (MUI). The project showcases the powerful synergy between Three.js's 3D rendering capabilities and React's component-based architecture, further enhanced by Redux's state management efficiency and the aesthetic flexibility of MUI. It serves as a comprehensive guide, demonstrating practical applications and offering insights into creating sophisticated, interactive 3D interfaces within a robust web application framework. This project not only teaches the technical aspects of integration but also illustrates the creative potential unlocked when these advanced technologies are skillfully combined.`,
+    tasks: [
+      {
+        key: 'Project Conceptualization and Design',
+        value:
+          'Initiated the project with a detailed conceptualization phase, focusing on how to effectively integrate Three.js with React to create dynamic 3D web experiences.',
+      },
+      {
+        key: 'Three.js Integration with React',
+        value:
+          'Implemented Three.js within the React framework, developing interactive 3D elements and ensuring seamless integration with React’s component lifecycle.',
+      },
+      {
+        key: 'State Management with Redux',
+        value:
+          'Incorporated Redux for state management, enhancing the application’s responsiveness and data handling capabilities for complex 3D interactions.',
+      },
+      {
+        key: 'UI Development with Material-UI',
+        value:
+          'Utilized Material-UI (MUI) to design and develop a user-friendly interface, ensuring the application is not only functional but also aesthetically appealing.',
+      },
+      {
+        key: 'Documentation and Article Writing',
+        value:
+          'Compiled the learning and development process into a comprehensive article, documenting the integration techniques and challenges to aid others in similar endeavors.',
+      },
+    ],
+  },
+  {
+    id: 'proj-16',
+    title: 'Undo/Redo Mechanism in a 3D Application with Redux',
+    description: `In this sample project, I focused on crafting a sophisticated Undo/Redo mechanism for a 3D application, demonstrating its implementation using Redux for state management, React for the user interface, and Three.js for 3D rendering. The project serves as a practical case study for an article, highlighting the complexities and solutions involved in integrating these technologies to achieve an intuitive and efficient user experience in 3D environments.`,
+    // imageUrl: preview1,
+    projectUrl: 'https://github.com/chamallakshika09/threejs-undo-redo',
+    category: 'Personal Project',
+    featuredProject: true,
+    tech: ['React.js', 'Redux', 'Three.js', 'Material UI', 'Javascript', 'HTML', 'CSS'],
+    detailedDescription: `This sample project was developed as an educational exercise to demonstrate the intricacies of implementing a sophisticated Undo/Redo mechanism within a 3D application, utilizing a combination of Redux, React, and Three.js. The core of the project involved harnessing Redux's robust state management capabilities to track and manipulate the application's state history, React's dynamic UI for seamless user interaction, and Three.js's powerful 3D rendering tools for vivid visual representation. The outcome was an article that not only walks through the technical process but also sheds light on the challenges and innovative strategies involved in creating a user-friendly, responsive, and feature-rich 3D application. This project stands as a testament to the potential of combining advanced web technologies to elevate user experience in complex application scenarios.`,
+    tasks: [
+      {
+        key: 'Project Conceptualization and Design',
+        value:
+          'Initiated the project with a detailed conceptualization phase, focusing on how to effectively integrate Three.js with React to create dynamic 3D web experiences.',
+      },
+      {
+        key: 'Three.js Integration with React',
+        value:
+          'Implemented Three.js within the React framework, developing interactive 3D elements and ensuring seamless integration with React’s component lifecycle.',
+      },
+      {
+        key: 'State Management with Redux',
+        value:
+          'Incorporated Redux for state management, enhancing the application’s responsiveness and data handling capabilities for complex 3D interactions.',
+      },
+      {
+        key: 'UI Development with Material-UI',
+        value:
+          'Utilized Material-UI (MUI) to design and develop a user-friendly interface, ensuring the application is not only functional but also aesthetically appealing.',
+      },
+      {
+        key: 'Documentation and Article Writing',
+        value:
+          'Compiled the learning and development process into a comprehensive article, documenting the integration techniques and challenges to aid others in similar endeavors.',
       },
     ],
   },
