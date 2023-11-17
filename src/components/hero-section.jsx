@@ -14,7 +14,7 @@ export const HeroSection = () => {
         component="img"
         src={ProfilePhoto}
         alt="Chamal Perera"
-        sx={{ width: 120, height: 120, borderRadius: '50%' }}
+        sx={{ width: 140, height: 172, borderRadius: '50%' }}
       />
       <Typography variant={isMobile ? 'h5' : 'h3'} gutterBottom textAlign="center">
         Chamal Perera

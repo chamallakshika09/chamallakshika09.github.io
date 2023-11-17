@@ -4,6 +4,7 @@ import { Download as DownloadIcon } from '@mui/icons-material';
 import { HobbiesAndInterests, PersonalQuoteAndGoals } from 'components';
 import ProfilePhoto from 'assets/my-photo.png';
 import { HeaderLayout } from 'layouts';
+import cvFile from 'assets/resume.pdf';
 
 export const AboutMe = () => {
   return (
@@ -22,7 +23,7 @@ export const AboutMe = () => {
             color="primary"
             startIcon={<DownloadIcon />}
             sx={{ mt: 4 }}
-            href="/path-to-your-resume.pdf"
+            href={cvFile}
             download
           >
             Download Resume

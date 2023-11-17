@@ -26,7 +26,7 @@ export const ContactCTA = () => {
         <Grid item>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/in/chamallakshika09/"
+            onClick={() => window.open('https://www.linkedin.com/in/chamallakshika09/')}
             target="_blank"
             aria-label="LinkedIn"
           >
@@ -34,14 +34,19 @@ export const ContactCTA = () => {
           </IconButton>
         </Grid>
         <Grid item>
-          <IconButton color="inherit" href="https://github.com/chamallakshika09" target="_blank" aria-label="GitHub">
+          <IconButton
+            color="inherit"
+            onClick={() => window.open('https://github.com/chamallakshika09')}
+            target="_blank"
+            aria-label="GitHub"
+          >
             <GitHubIcon fontSize="large" />
           </IconButton>
         </Grid>
         <Grid item>
           <IconButton
             color="inherit"
-            href="https://stackoverflow.com/users/14613753/chamal-perera"
+            onClick={() => window.open('https://stackoverflow.com/users/14613753/chamal-perera')}
             target="_blank"
             aria-label="Stack Overflow"
           >

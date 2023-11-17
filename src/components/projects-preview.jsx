@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, CardContent, Button, Stack, CardActions } from '@mui/material';
+import { Typography, Card, CardContent, Button, Stack, CardActions, CardMedia } from '@mui/material';
 import Slider from 'react-slick';
 import { projectsData } from 'data';
 import { useNavigate } from 'react-router-dom';
@@ -88,13 +88,17 @@ export const ProjectsPreview = () => {
                   width: { xs: '100%', sm: '95% !important' },
                   ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
                 }}
+                key={project.id}
               >
-                {/* <CardMedia
-      component="img"
-      image={project.imageUrl}
-      alt={project.title}
-      sx={{ height: 140, width: 'auto' }}
-    /> */}
+                {project.videoLink && (
+                  <CardMedia
+                    component="video"
+                    controls
+                    src={project.videoLink}
+                    alt={`video of ${project.title}`}
+                    sx={{ height: 140, width: 'auto' }}
+                  />
+                )}
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {project.title}
@@ -104,8 +108,8 @@ export const ProjectsPreview = () => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" onClick={() => window.open(project.projectUrl)}>
-                    Read More
+                  <Button size="small" onClick={() => window.open(project.primaryLink)}>
+                    Explore
                   </Button>
                 </CardActions>
               </Card>

@@ -1,13 +1,154 @@
-import preview1 from 'assets/project1-preview.png';
-import preview2 from 'assets/project2-preview.png';
+import gaudiVideo from 'assets/gaudi-builder.mp4';
+import gaudiVideo1 from 'assets/gaudi-builder-1.mp4';
+import undoRedoDemo from 'assets/undo-redo-demo.mp4';
+import threeDemo from 'assets/three-demo.mp4';
+
 export const projectsData = [
   {
     id: 'proj-1',
+    title: 'Gaudi Builder',
+    description: `
+    In collaboration with a colleague, I developed a multiplayer game inspired by Antoni Gaudí's hanging chain model, where players strategically create structures using balls and ropes. The gameplay, centered around the catenary curve concept, blends architectural principles with puzzle-solving, echoing the whimsical and structurally sound designs of Gaudí's Sagrada Família. This project served as both a tribute to Gaudí's architectural ingenuity and an exploration of the fusion between architecture and interactive gaming.`,
+    category: 'Personal Project',
+    featuredProject: true,
+    tech: [
+      'React.js',
+      'Node.js',
+      'Redux',
+      'Mongodb',
+      'Express.js',
+      'Three.js',
+      'AWS',
+      'Material UI',
+      'Javascript',
+      'HTML',
+      'CSS',
+      'socket.io',
+      'ammo.js',
+    ],
+    detailedDescription: `In our multiplayer game project, we implemented a client-server architecture for robust and efficient performance. The frontend was developed using React.js, offering a dynamic and responsive user interface, while the backend was built on Express.js, ensuring stable server-side operations. For real-time collaboration among players, we integrated Socket.io, which facilitated instantaneous communication and interaction within the game environment. The physics of the game, critical in mimicking realistic architectural structures, were handled using the ammo.js bullet physics library, allowing for accurate physical simulations. Additionally, we employed P5.js and Three.js for visualizations, with P5.js enabling creative 2D graphical representations and Three.js providing the framework for immersive 3D renderings, together enhancing the visual appeal and engagement of the game.`,
+    tasks: [
+      {
+        key: 'Project Setup and Configuration',
+        value:
+          'Led the initial setup and configuration of the project, establishing a robust foundation for development and collaboration.',
+      },
+      {
+        key: 'Socket.io Integration for Real-Time Collaboration',
+        value:
+          'Implemented Socket.io to facilitate real-time communication and interaction, enhancing the multiplayer aspect of the game.',
+      },
+      {
+        key: 'Frontend Development with React.js',
+        value:
+          'Developed the dynamic user interface using React.js, ensuring a responsive and engaging player experience.',
+      },
+      {
+        key: 'Backend Development with Express.js',
+        value:
+          'Developed the backend using Express.js, managing server-side logic and maintaining stable game performance.',
+      },
+      {
+        key: 'Physics Simulation with ammo.js',
+        value:
+          'Co-integrated ammo.js for realistic physics simulation, replicating the physical behaviors of balls and ropes in the game environment.',
+      },
+      {
+        key: 'Visualization Enhancement with P5.js and Three.js',
+        value:
+          'Utilized P5.js and Three.js for creating immersive 2D and 3D visualizations, adding aesthetic and interactive dimensions to the game.',
+      },
+      {
+        key: 'Collaborative Component Development',
+        value:
+          'Worked closely with a colleague to develop various components of the game, fostering teamwork and leveraging combined expertise.',
+      },
+    ],
+    githubLink: 'https://github.com/chamallakshika09/dbf-sample-game',
+    videoLink: gaudiVideo1,
+    primaryLink: 'https://github.com/chamallakshika09/dbf-sample-game',
+  },
+  {
+    id: 'proj-2',
+    title: 'Integrating Three.js with React, Redux and MUI ',
+    description: `This sample project serves as a practical demonstration for an article detailing the integration of Three.js with React, Redux, and MUI. It exemplifies how these technologies can be seamlessly combined to create visually rich and interactive 3D web applications, highlighting best practices and efficient methodologies.`,
+    category: 'Personal Project',
+    featuredProject: true,
+    tech: ['React.js', 'Redux', 'Three.js', 'Material UI', 'Javascript', 'HTML', 'CSS'],
+    detailedDescription: `In this sample project, created specifically for an instructional article, we delve into the intricacies of integrating Three.js with React, Redux, and Material-UI (MUI). The project showcases the powerful synergy between Three.js's 3D rendering capabilities and React's component-based architecture, further enhanced by Redux's state management efficiency and the aesthetic flexibility of MUI. It serves as a comprehensive guide, demonstrating practical applications and offering insights into creating sophisticated, interactive 3D interfaces within a robust web application framework. This project not only teaches the technical aspects of integration but also illustrates the creative potential unlocked when these advanced technologies are skillfully combined.`,
+    tasks: [
+      {
+        key: 'Project Conceptualization and Design',
+        value:
+          'Initiated the project with a detailed conceptualization phase, focusing on how to effectively integrate Three.js with React to create dynamic 3D web experiences.',
+      },
+      {
+        key: 'Three.js Integration with React',
+        value:
+          'Implemented Three.js within the React framework, developing interactive 3D elements and ensuring seamless integration with React’s component lifecycle.',
+      },
+      {
+        key: 'State Management with Redux',
+        value:
+          'Incorporated Redux for state management, enhancing the application’s responsiveness and data handling capabilities for complex 3D interactions.',
+      },
+      {
+        key: 'UI Development with Material-UI',
+        value:
+          'Utilized Material-UI (MUI) to design and develop a user-friendly interface, ensuring the application is not only functional but also aesthetically appealing.',
+      },
+      {
+        key: 'Documentation and Article Writing',
+        value:
+          'Compiled the learning and development process into a comprehensive article, documenting the integration techniques and challenges to aid others in similar endeavors.',
+      },
+    ],
+    githubLink: 'https://github.com/chamallakshika09/react-threejs',
+    videoLink: threeDemo,
+    primaryLink: 'https://github.com/chamallakshika09/react-threejs',
+  },
+  {
+    id: 'proj-3',
+    title: 'Undo/Redo Mechanism in a 3D Application with Redux',
+    description: `In this sample project, I focused on crafting a sophisticated Undo/Redo mechanism for a 3D application, demonstrating its implementation using Redux for state management, React for the user interface, and Three.js for 3D rendering. The project serves as a practical case study for an article, highlighting the complexities and solutions involved in integrating these technologies to achieve an intuitive and efficient user experience in 3D environments.`,
+    category: 'Personal Project',
+    featuredProject: true,
+    tech: ['React.js', 'Redux', 'Three.js', 'Material UI', 'Javascript', 'HTML', 'CSS'],
+    detailedDescription: `This sample project was developed as an educational exercise to demonstrate the intricacies of implementing a sophisticated Undo/Redo mechanism within a 3D application, utilizing a combination of Redux, React, and Three.js. The core of the project involved harnessing Redux's robust state management capabilities to track and manipulate the application's state history, React's dynamic UI for seamless user interaction, and Three.js's powerful 3D rendering tools for vivid visual representation. The outcome was an article that not only walks through the technical process but also sheds light on the challenges and innovative strategies involved in creating a user-friendly, responsive, and feature-rich 3D application. This project stands as a testament to the potential of combining advanced web technologies to elevate user experience in complex application scenarios.`,
+    tasks: [
+      {
+        key: 'Project Conceptualization and Design',
+        value:
+          'Initiated the project with a detailed conceptualization phase, focusing on how to effectively integrate Three.js with React to create dynamic 3D web experiences.',
+      },
+      {
+        key: 'Three.js Integration with React',
+        value: `Implemented Three.js within the React framework, developing interactive 3D elements and ensuring seamless integration with React's component lifecycle.`,
+      },
+      {
+        key: 'State Management with Redux',
+        value: `Incorporated Redux for state management, enhancing the application's responsiveness and data handling capabilities for complex 3D interactions.`,
+      },
+      {
+        key: 'UI Development with Material-UI',
+        value:
+          'Utilized Material-UI (MUI) to design and develop a user-friendly interface, ensuring the application is not only functional but also aesthetically appealing.',
+      },
+      {
+        key: 'Documentation and Article Writing',
+        value:
+          'Compiled the learning and development process into a comprehensive article, documenting the integration techniques and challenges to aid others in similar endeavors.',
+      },
+    ],
+    githubLink: 'https://github.com/chamallakshika09/threejs-undo-redo',
+    videoLink: undoRedoDemo,
+    primaryLink: 'https://github.com/chamallakshika09/threejs-undo-redo',
+  },
+  {
+    id: 'proj-4',
     title: 'DBF SaaS product',
     description:
       'An advanced online platform designed to revolutionize building design in the AEC (Architecture, Engineering, and Construction) sector, offering tools that streamline the design process and enhance project quality. This platform uniquely integrates data-driven insights, enabling architects and engineers to make informed decisions and optimize construction projects for better efficiency and outcomes.',
-    imageUrl: preview1,
-    projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
     featuredProject: false,
     tech: [
@@ -71,14 +212,14 @@ export const projectsData = [
           'Actively mentored junior developers, fostering skill development and promoting best practices within the team.',
       },
     ],
+    projectUrl: 'https://app.saas.bluefoam.io/',
+    primaryLink: 'https://app.saas.bluefoam.io/',
   },
   {
-    id: 'proj-2',
+    id: 'proj-5',
     title: 'Generative Design Tool',
     description:
       'An innovative Minimum Viable Product (MVP) leveraging AI and machine learning algorithms for generative design in hospital master planning, tailored specifically for an enterprise client. This cutting-edge solution streamlines the planning process by intelligently generating optimized layouts and design options, significantly enhancing efficiency and decision-making in healthcare infrastructure development.',
-    imageUrl: preview2,
-    // projectUrl: '#/projects/project-two',
     category: 'Work Project',
     featuredProject: false,
     tech: [
@@ -140,12 +281,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-3',
+    id: 'proj-6',
     title: 'DBF Play V1',
     description:
       'Developed an advanced online platform specifically tailored to facilitate early-stage building design and urban planning within the AEC (Architecture, Engineering, and Construction) sector. This tool streamlines the design process, offering innovative features and resources that cater to the intricate needs of architects, engineers, and city planners.',
-    imageUrl: preview1,
-    projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
     featuredProject: false,
     tech: [
@@ -209,14 +348,14 @@ export const projectsData = [
           'Actively mentored junior developers, fostering skill development and promoting best practices within the team.',
       },
     ],
+    projectUrl: 'https://auth.app.bluefoam.io/',
+    primaryLink: 'https://auth.app.bluefoam.io/',
   },
   {
-    id: 'proj-4',
+    id: 'proj-7',
     title: 'DBF Hub',
     description:
       'A desktop application to facilitate seamless data synchronization between the DBF app and architectural software like Revit and Archicad, significantly streamlining the workflow in architectural design processes.',
-    imageUrl: preview1,
-    // projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
     featuredProject: false,
     tech: ['React.js', 'Electron.js', 'Redux', 'AWS', 'Material UI', 'Javascript', 'HTML', 'CSS', 'Python'],
@@ -241,11 +380,9 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-5',
+    id: 'proj-8',
     title: 'DBF Sync Revit Plugin',
     description: 'A specialized plugin for Revit, designed to synchronize data seamlessly between DBF apps and Revit',
-    imageUrl: preview1,
-    // projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
     featuredProject: false,
     tech: ['React.js', 'Electron.js', 'Redux', 'AWS', 'Material UI', 'Javascript', 'HTML', 'CSS', 'Python'],
@@ -265,12 +402,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-6',
+    id: 'proj-9',
     title: 'House Masterplanning Tool',
     description:
       'An online platform to streamline the design and approval process of prefabricated houses, enhancing workflow efficiency for an enterprise client. The platform facilitates easy submission, review, and approval of designs, bolstering collaboration and project management in the housing sector',
-    imageUrl: preview1,
-    // projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
     featuredProject: false,
     tech: [
@@ -322,12 +457,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-7',
+    id: 'proj-10',
     title: 'DBF Beta',
     description:
       'This is the legacy application of DBF SaaS and enterprise apps. This is an online platform to assist in early stage building design and city planning for the AEC (Architecture, Engineering, and Construction) sector',
-    imageUrl: preview1,
-    // projectUrl: 'https://app.saas.bluefoam.io/',
     category: 'Work Project',
     featuredProject: false,
     tech: ['Javascript', 'HTML', 'CSS', 'EJS', 'jQuery', 'Node.js', 'Express.js', 'Mongodb', 'Three.js', 'AWS'],
@@ -341,12 +474,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-8',
+    id: 'proj-11',
     title: 'Varnik',
     description:
       'This project entailed developing an innovative AR/VR Application Generation Platform, designed to create immersive augmented and virtual reality experiences. The platform integrates cutting-edge technologies to enable users to effortlessly design and deploy interactive AR/VR applications for various use cases.',
-    imageUrl: preview1,
-    // projectUrl: 'https://example.com'
     category: 'Work Project',
     featuredProject: false,
     tech: ['Vue.js', 'PHP', 'VueX', 'Vuetify', 'Laravel', 'AWS', 'Javascript', 'HTML', 'CSS', 'MySQL'],
@@ -371,12 +502,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-9',
+    id: 'proj-12',
     title: 'Canvassing Management System',
     description:
       "L K Simulations' own product, designed for effective canvassing management with integrated web and mobile application solutions.",
-    imageUrl: preview1,
-    // projectUrl: 'https://example.com',
     category: 'Work Project',
     featuredProject: false,
     tech: ['React', 'Redux', 'React Native', 'Firebase', 'Javascript', 'HTML', 'CSS'],
@@ -395,12 +524,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-10',
+    id: 'proj-13',
     title: 'Staff Transport Management System',
     description:
       'A comprehensive transport management solution designed by L K Simulations, focusing on streamlining staff transportation logistics.',
-    imageUrl: preview1,
-    // projectUrl: 'https://example.com',
     category: 'Work Project',
     featuredProject: false,
     tech: [
@@ -431,12 +558,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-11',
+    id: 'proj-14',
     title: 'Electronic Logbook and Fishery Management Support System',
     description:
       'A research project for the Department of Fisheries & Aquatic Resources (DFAR), Sri Lanka, focusing on improving fishery management and reporting.',
-    imageUrl: preview1,
-    // projectUrl: 'https://example.com',
     category: 'Research Project',
     featuredProject: false,
     tech: ['Java SE', 'MySQL', 'Android', 'PHP', 'JavaScript', 'HTML', 'CSS'],
@@ -468,12 +593,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 'proj-12',
+    id: 'proj-15',
     title: 'Siyara Vessel Traffic Management System',
     description:
       'An award-winning research project from the University of Colombo School of Computing, in collaboration with Sri Lanka Ports Authority and Sri Lanka Coast Guard, focused on enhancing maritime traffic management.',
-    imageUrl: preview1,
-    // projectUrl: 'https://example.com',
     category: 'Research Project',
     featuredProject: false,
     tech: ['Android', 'PHP', 'MySQL', 'C++', 'OpenCPN', 'OGRE3D', 'C# WPF'],
@@ -510,14 +633,14 @@ export const projectsData = [
           'Conducted comprehensive training sessions for Sri Lanka Coast Guard personnel, ensuring effective system utilization and operation.',
       },
     ],
+    youtubeLink: 'https://youtu.be/TCwe-GrE8QQ?si=qLyz5cdwyP7-Ps7L',
+    primaryLink: 'https://youtu.be/TCwe-GrE8QQ?si=qLyz5cdwyP7-Ps7L',
   },
   {
-    id: 'proj-13',
+    id: 'proj-16',
     title: 'Vidusayura Ship Handling Simulator',
     description:
       'An award-winning research project from the University of Colombo School of Computing, in collaboration with Ocean University, Sri Lanka, focused on developing a state-of-the-art ship handling simulator.',
-    imageUrl: preview1,
-    // projectUrl: 'https://example.com',
     category: 'Research Project',
     featuredProject: false,
     tech: ['C++', 'OpenCPN', 'WxWidgets', 'OGRE3D'],
@@ -543,143 +666,7 @@ export const projectsData = [
         value: `Managed the system's deployment at Ocean University, Sri Lanka, and conducted extensive training sessions for the personnel, facilitating effective system adoption and utilization.`,
       },
     ],
-  },
-  {
-    id: 'proj-14',
-    title: 'Gaudi Builder',
-    description: `In collaboration with a colleague, I developed an engaging multiplayer game that pays homage to the innovative architectural techniques of Antoni Gaudí. Drawing inspiration from Gaudí's revolutionary hanging chain model, our game challenges players to strategically place balls and ropes in a virtual space. The game's core mechanic revolves around the principles of the catenary curve, mimicking the way gravity shapes hanging chains. This not only adds a layer of architectural authenticity but also introduces a unique puzzle-solving element to the gameplay. As players manipulate these elements, they create intricate, gravity-defying structures reminiscent of the whimsical yet structurally sound designs found in Gaudí's iconic Sagrada Família. This project was not just a tribute to Gaudí's genius but also an exploration of the intersection between architectural ingenuity and interactive gaming experiences.`,
-    // imageUrl: preview1,
-    projectUrl: 'https://github.com/chamallakshika09/dbf-sample-game',
-    category: 'Personal Project',
-    featuredProject: true,
-    tech: [
-      'React.js',
-      'Node.js',
-      'Redux',
-      'Mongodb',
-      'Express.js',
-      'Three.js',
-      'AWS',
-      'Material UI',
-      'Javascript',
-      'HTML',
-      'CSS',
-      'socket.io',
-      'ammo.js',
-    ],
-    detailedDescription: `In our multiplayer game project, we implemented a client-server architecture for robust and efficient performance. The frontend was developed using React.js, offering a dynamic and responsive user interface, while the backend was built on Express.js, ensuring stable server-side operations. For real-time collaboration among players, we integrated Socket.io, which facilitated instantaneous communication and interaction within the game environment. The physics of the game, critical in mimicking realistic architectural structures, were handled using the ammo.js bullet physics library, allowing for accurate physical simulations. Additionally, we employed P5.js and Three.js for visualizations, with P5.js enabling creative 2D graphical representations and Three.js providing the framework for immersive 3D renderings, together enhancing the visual appeal and engagement of the game.`,
-    tasks: [
-      {
-        key: 'Project Setup and Configuration',
-        value:
-          'Led the initial setup and configuration of the project, establishing a robust foundation for development and collaboration.',
-      },
-      {
-        key: 'Socket.io Integration for Real-Time Collaboration',
-        value:
-          'Implemented Socket.io to facilitate real-time communication and interaction, enhancing the multiplayer aspect of the game.',
-      },
-      {
-        key: 'Frontend Development with React.js',
-        value:
-          'Developed the dynamic user interface using React.js, ensuring a responsive and engaging player experience.',
-      },
-      {
-        key: 'Backend Development with Express.js',
-        value:
-          'Developed the backend using Express.js, managing server-side logic and maintaining stable game performance.',
-      },
-      {
-        key: 'Physics Simulation with ammo.js',
-        value:
-          'Co-integrated ammo.js for realistic physics simulation, replicating the physical behaviors of balls and ropes in the game environment.',
-      },
-      {
-        key: 'Visualization Enhancement with P5.js and Three.js',
-        value:
-          'Utilized P5.js and Three.js for creating immersive 2D and 3D visualizations, adding aesthetic and interactive dimensions to the game.',
-      },
-      {
-        key: 'Collaborative Component Development',
-        value:
-          'Worked closely with a colleague to develop various components of the game, fostering teamwork and leveraging combined expertise.',
-      },
-    ],
-  },
-  {
-    id: 'proj-15',
-    title: 'Integrating Three.js with React, Redux and MUI ',
-    description: `This sample project serves as a practical demonstration for an article detailing the integration of Three.js with React, Redux, and MUI. It exemplifies how these technologies can be seamlessly combined to create visually rich and interactive 3D web applications, highlighting best practices and efficient methodologies.`,
-    // imageUrl: preview1,
-    projectUrl: 'https://github.com/chamallakshika09/react-threejs',
-    category: 'Personal Project',
-    featuredProject: true,
-    tech: ['React.js', 'Redux', 'Three.js', 'Material UI', 'Javascript', 'HTML', 'CSS'],
-    detailedDescription: `In this sample project, created specifically for an instructional article, we delve into the intricacies of integrating Three.js with React, Redux, and Material-UI (MUI). The project showcases the powerful synergy between Three.js's 3D rendering capabilities and React's component-based architecture, further enhanced by Redux's state management efficiency and the aesthetic flexibility of MUI. It serves as a comprehensive guide, demonstrating practical applications and offering insights into creating sophisticated, interactive 3D interfaces within a robust web application framework. This project not only teaches the technical aspects of integration but also illustrates the creative potential unlocked when these advanced technologies are skillfully combined.`,
-    tasks: [
-      {
-        key: 'Project Conceptualization and Design',
-        value:
-          'Initiated the project with a detailed conceptualization phase, focusing on how to effectively integrate Three.js with React to create dynamic 3D web experiences.',
-      },
-      {
-        key: 'Three.js Integration with React',
-        value:
-          'Implemented Three.js within the React framework, developing interactive 3D elements and ensuring seamless integration with React’s component lifecycle.',
-      },
-      {
-        key: 'State Management with Redux',
-        value:
-          'Incorporated Redux for state management, enhancing the application’s responsiveness and data handling capabilities for complex 3D interactions.',
-      },
-      {
-        key: 'UI Development with Material-UI',
-        value:
-          'Utilized Material-UI (MUI) to design and develop a user-friendly interface, ensuring the application is not only functional but also aesthetically appealing.',
-      },
-      {
-        key: 'Documentation and Article Writing',
-        value:
-          'Compiled the learning and development process into a comprehensive article, documenting the integration techniques and challenges to aid others in similar endeavors.',
-      },
-    ],
-  },
-  {
-    id: 'proj-16',
-    title: 'Undo/Redo Mechanism in a 3D Application with Redux',
-    description: `In this sample project, I focused on crafting a sophisticated Undo/Redo mechanism for a 3D application, demonstrating its implementation using Redux for state management, React for the user interface, and Three.js for 3D rendering. The project serves as a practical case study for an article, highlighting the complexities and solutions involved in integrating these technologies to achieve an intuitive and efficient user experience in 3D environments.`,
-    // imageUrl: preview1,
-    projectUrl: 'https://github.com/chamallakshika09/threejs-undo-redo',
-    category: 'Personal Project',
-    featuredProject: true,
-    tech: ['React.js', 'Redux', 'Three.js', 'Material UI', 'Javascript', 'HTML', 'CSS'],
-    detailedDescription: `This sample project was developed as an educational exercise to demonstrate the intricacies of implementing a sophisticated Undo/Redo mechanism within a 3D application, utilizing a combination of Redux, React, and Three.js. The core of the project involved harnessing Redux's robust state management capabilities to track and manipulate the application's state history, React's dynamic UI for seamless user interaction, and Three.js's powerful 3D rendering tools for vivid visual representation. The outcome was an article that not only walks through the technical process but also sheds light on the challenges and innovative strategies involved in creating a user-friendly, responsive, and feature-rich 3D application. This project stands as a testament to the potential of combining advanced web technologies to elevate user experience in complex application scenarios.`,
-    tasks: [
-      {
-        key: 'Project Conceptualization and Design',
-        value:
-          'Initiated the project with a detailed conceptualization phase, focusing on how to effectively integrate Three.js with React to create dynamic 3D web experiences.',
-      },
-      {
-        key: 'Three.js Integration with React',
-        value:
-          'Implemented Three.js within the React framework, developing interactive 3D elements and ensuring seamless integration with React’s component lifecycle.',
-      },
-      {
-        key: 'State Management with Redux',
-        value:
-          'Incorporated Redux for state management, enhancing the application’s responsiveness and data handling capabilities for complex 3D interactions.',
-      },
-      {
-        key: 'UI Development with Material-UI',
-        value:
-          'Utilized Material-UI (MUI) to design and develop a user-friendly interface, ensuring the application is not only functional but also aesthetically appealing.',
-      },
-      {
-        key: 'Documentation and Article Writing',
-        value:
-          'Compiled the learning and development process into a comprehensive article, documenting the integration techniques and challenges to aid others in similar endeavors.',
-      },
-    ],
+    youtubeLink: 'https://youtu.be/LVdEw_rmOT0?si=D-ylkVR3Yvl4KXbN',
+    primaryLink: 'https://youtu.be/LVdEw_rmOT0?si=D-ylkVR3Yvl4KXbN',
   },
 ];

@@ -15,8 +15,14 @@ import {
   ListItemIcon,
   CardActions,
   Button,
+  IconButton,
+  Tooltip,
+  CardMedia,
 } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
+import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import { projectsData } from 'data';
 import { HeaderLayout } from 'layouts';
 
@@ -76,12 +82,15 @@ export const Projects = () => {
                 ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
               }}
             >
-              {/* <CardMedia
-                    component="img"
-                    image={project.imageUrl}
-                    alt={project.title}
-                    sx={{ height: 140, width: 'auto' }}
-                  /> */}
+              {project.videoLink && (
+                <CardMedia
+                  component="video"
+                  controls
+                  src={project.videoLink}
+                  alt={`video of ${project.title}`}
+                  sx={{ height: 140, width: 'auto' }}
+                />
+              )}
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {project.title}
@@ -90,10 +99,51 @@ export const Projects = () => {
                   {project.description}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions
+                sx={{
+                  display: 'flex',
+                }}
+              >
                 <Button size="small" onClick={() => handleOpenModal(project)}>
                   Read More
                 </Button>
+                <div style={{ flexGrow: 1 }} />
+                {project.youtubeLink && (
+                  <Tooltip title="Open Youtube Link">
+                    <IconButton
+                      color="inherit"
+                      onClick={() => window.open(project.youtubeLink)}
+                      target="_blank"
+                      aria-label="YouTube link"
+                    >
+                      <PlayCircleFilledIcon fontSize="medium" />
+                    </IconButton>
+                  </Tooltip>
+                )}
+                {project.githubLink && (
+                  <Tooltip title="Open Github Link">
+                    <IconButton
+                      color="inherit"
+                      onClick={() => window.open(project.githubLink)}
+                      target="_blank"
+                      aria-label="GitHub"
+                    >
+                      <GitHubIcon fontSize="medium" />
+                    </IconButton>
+                  </Tooltip>
+                )}
+                {project.projectUrl && (
+                  <Tooltip title="Open Project Link">
+                    <IconButton
+                      color="inherit"
+                      onClick={() => window.open(project.projectUrl)}
+                      target="_blank"
+                      aria-label="Project Link"
+                    >
+                      <LaunchIcon fontSize="medium" />
+                    </IconButton>
+                  </Tooltip>
+                )}
               </CardActions>
             </Card>
           </Grid>
