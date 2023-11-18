@@ -82,9 +82,9 @@ export const Education = () => {
             <Box
               component="img"
               sx={{
-                height: 233,
+                height: 100,
                 width: 'auto',
-                maxHeight: { xs: 233, md: 167 },
+                maxHeight: { xs: 60, md: 100 },
                 // maxWidth: { xs: 350, md: 250 },
               }}
               alt="Education logo"

@@ -82,7 +82,7 @@ export const Achievements = () => {
               sx={{
                 height: 233,
                 width: 'auto',
-                maxHeight: { xs: 233, md: 167 },
+                maxHeight: { xs: 167, md: 233 },
                 // maxWidth: { xs: 350, md: 250 },
               }}
               alt="Achievement badge"
