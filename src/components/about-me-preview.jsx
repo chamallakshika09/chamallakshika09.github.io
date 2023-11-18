@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, Button, Stack, Container } from '@mui/material';
 import { aboutMe } from 'data';
 import { useNavigate } from 'react-router-dom';

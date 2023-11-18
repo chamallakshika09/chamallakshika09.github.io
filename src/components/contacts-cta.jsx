@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, Button, Grid, IconButton, Stack } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

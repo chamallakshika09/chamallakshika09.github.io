@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Button, useTheme, useMediaQuery, Stack } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import ProfilePhoto from 'assets/my-photo.png';
