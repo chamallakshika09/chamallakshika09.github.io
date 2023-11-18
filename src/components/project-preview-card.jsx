@@ -11,7 +11,6 @@ export const ProjectPreviewCard = ({ project }) => {
         width: { xs: '100%', sm: '95% !important' },
         ':hover': { transform: 'scale(1.05)', transition: '0.3s' },
       }}
-      key={project.id}
     >
       {project.videoLink && (
         <CardMedia

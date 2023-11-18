@@ -69,7 +69,7 @@ export const ProjectPreviewSlider = () => {
       {projectsData
         .filter((project) => project.featuredProject)
         .map((project) => (
-          <ProjectPreviewCard project={project} />
+          <ProjectPreviewCard project={project} key={project.id} />
         ))}
     </Slider>
   );

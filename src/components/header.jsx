@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext, useState } from 'react';
 import {
   AppBar,
   Toolbar,
   IconButton,
-  Typography,
   Button,
   Drawer,
   List,
@@ -15,11 +14,11 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import { ThemeContext } from 'context';
 import { useNavigate } from 'react-router-dom';
+import { ThemeContext } from 'context';
+import logoImage from 'assets/logo.png';
 
 const menuItems = [
-  { key: 'name', text: 'Chamal Perera', link: '/' },
   { key: 'about-me', text: 'About Me', link: '/about-me' },
   { key: 'experience', text: 'Experience', link: '/experience' },
   { key: 'education', text: 'Education', link: '/education' },
@@ -35,7 +34,7 @@ export const Header = () => {
   const { mode, setMode } = useContext(ThemeContext);
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
@@ -43,7 +42,7 @@ export const Header = () => {
 
   const drawer = (
     <List>
-      {menuItems.slice(1).map(({ text, key, link }) => (
+      {menuItems.map(({ text, key, link }) => (
         <ListItemButton key={key} onClick={() => navigate(link)}>
           <ListItemText primary={text} />
         </ListItemButton>
@@ -54,11 +53,10 @@ export const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Button key={menuItems[0].key} color="inherit" onClick={() => navigate(menuItems[0].link)}>
-            {menuItems[0].text}
-          </Button>
-        </Typography>
+        <Button color="inherit" onClick={() => navigate('/')}>
+          <img src={logoImage} alt="Logo" style={{ height: 40 }} />
+        </Button>
+        <div style={{ flexGrow: 1 }} />
         {isMobile ? (
           <>
             <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle}>
@@ -79,7 +77,7 @@ export const Header = () => {
           </>
         ) : (
           <div>
-            {menuItems.slice(1).map(({ text, key, link }) => (
+            {menuItems.map(({ text, key, link }) => (
               <Button key={key} color="inherit" onClick={() => navigate(link)}>
                 {text}
               </Button>
