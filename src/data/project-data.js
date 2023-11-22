@@ -385,7 +385,7 @@ export const projectsData = [
     description: 'A specialized plugin for Revit, designed to synchronize data seamlessly between DBF apps and Revit',
     category: 'Work Project',
     featuredProject: false,
-    tech: ['React.js', 'Electron.js', 'Redux', 'AWS', 'Material UI', 'Javascript', 'HTML', 'CSS', 'Python'],
+    tech: ['C#', 'Revit API'],
     detailedDescription:
       'This plugin was built utilizing the C# programming language and the Revit API. This plugin is specifically designed to facilitate seamless data synchronization between DBF applications and Revit. The development involved leveraging the powerful capabilities of the Revit API to ensure smooth, real-time data integration, thereby optimizing architectural workflows and project efficiency. This tool represents a significant advancement in bridging software ecosystems within the architectural design realm.',
     tasks: [
