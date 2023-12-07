@@ -16,7 +16,7 @@ export const ContactCTA = () => {
         Let's Connect!
       </Typography>
       <Typography variant="body1" paragraph textAlign="center">
-        I'm always open to discussing new opportunities, projects, or collaborations.
+        I'm always open to discuss new opportunities, projects, or collaborations.
       </Typography>
       <Button variant="contained" color="primary" href="mailto:chamallakshika09@gmail.com" startIcon={<EmailIcon />}>
         Email Me

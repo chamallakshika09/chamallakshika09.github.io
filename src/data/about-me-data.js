@@ -4,7 +4,5 @@ development and enjoy building robust and scalable web applications using cuttin
   skills: `My journey in software development started in 2013, and since then, I've been honing my skills in JavaScript,
 React, HTML, CSS, and various web development technologies. I love solving complex problems and creating
 elegant solutions for real-world challenges.`,
-  hobbies: `In my free time, I enjoy spending time with my family and friends, and I'm always eager to learn and explore
-new technologies. I believe in continuous improvement and strive to stay up-to-date with the latest industry
-trends and best practices.`,
+  hobbies: `I take pleasure in spending quality time with my family and friends, which is a vital part of my life. Additionally, I have a strong passion for continuously learning and exploring new technologies, a pursuit that excites and motivates me.`,
 };
