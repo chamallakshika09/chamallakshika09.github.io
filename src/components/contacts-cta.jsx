@@ -2,6 +2,7 @@ import { Typography, Button, Grid, IconButton, Stack } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackOverflowIcon from 'assets/stack-overflow-icon';
 
 export const ContactCTA = () => {
@@ -50,6 +51,16 @@ export const ContactCTA = () => {
             aria-label="Stack Overflow"
           >
             <StackOverflowIcon width={32} />
+          </IconButton>
+        </Grid>
+        <Grid item>
+          <IconButton
+            color="inherit"
+            onClick={() => window.open(`https://wa.me/94779365595`)}
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <WhatsAppIcon fontSize="large" />
           </IconButton>
         </Grid>
       </Grid>
